@@ -1,0 +1,377 @@
+/* Plate Orange: #FF7933; */
+body {
+    
+    background-color: white;
+    font-family: "HelveticaNeue-Light", sans-serif;
+    align-content: center;
+    align-items: center;
+    text-align: center  
+        
+    
+    
+}
+
+body.history {
+    
+    background-color: #dddddd
+    
+}
+
+div {
+    
+    margin: auto;
+    margin-bottom: 15px;
+    width: 400px;
+    
+    
+    text-align: center;
+    
+    background-color: transparent;
+    
+    border-color: transparent;
+    
+    border-width: 1px;
+
+    align-items: center;
+    
+}
+
+div.round {
+    
+    border-radius: 15px;
+    
+}
+
+
+
+div.bg {
+    
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    
+}
+
+div.shadow {
+       
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+div.clear {
+    
+    background-color: transparent;
+
+}
+
+div.bottom {
+    
+    bottom: 0px;
+    border-radius: 0px;
+    border-color: darkgray;
+    height: 100;
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    position: fixed ; 
+    
+}
+
+div.card {
+
+    border-radius: 0px;
+
+}
+
+
+button {
+    
+    height: 40px;
+    width: 100px;
+    background-color: #888888;
+    text-align: center;
+    font-size: 25px;
+    font-family : "HelveticaNeue-Light", sans-serif;
+    color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 15px;
+    
+    -webkit-transition : background-color 500ms ease-out;
+    -moz-transition : background-color 500ms ease-out;
+    -o-transition : background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
+    
+}
+
+button:active {
+    
+    background-color: #FF7933;
+    
+}
+
+button.enabled {
+    
+    background-color: #888888;
+    
+}
+
+button:hover {
+    
+    background-color: #FF7933;
+    
+}
+.bottom-margin {
+    
+    margin-bottom: 15px;
+    
+}
+
+input {
+    
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+    border-color: transparent;
+    
+    color: #999999;
+    background-color: transparent;
+    font-size: 30px;
+        
+    -webkit-transition: border 500ms ease-out;
+    -moz-transition : border 500ms ease-out;
+    -o-transition : border 500ms ease-out;
+    transition: border 500ms ease-out;
+      
+}
+
+input[type="number"] {
+    font-family: "HelveticeNeue-Thin", sans-serif;
+    font-size: 30px;
+}
+
+input:focus {
+    
+    outline: none;
+    border-bottom-color: #FF7933;
+}
+
+h1 {
+    
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 30px;
+    padding-top: 15px;
+    color: #999; 
+    
+}
+
+h1.light {
+    
+    color: #ababab;
+    
+}
+
+p {
+    color: #999;
+}
+
+h2 {
+    
+    
+    color: #777;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+
+h3 {
+    
+    color: #777;
+    
+}
+
+
+footer {
+    
+    color: white;
+    text-align: center;
+    font-family: "Ariel", sans-serif;
+     
+}
+
+table {
+    
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 15px;
+    
+}
+
+.vert-align {
+    
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    margin: 1px;
+    padding: 1px;
+
+}
+
+
+td,th {
+    
+    border-color: #65ce84;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+tr,nth-child(even) {
+    
+    background-color: lightgray;
+    
+}
+
+a {
+    
+    color : #FF7933;
+    
+    font-weight: 500;
+    
+    text-decoration: none;
+    
+    -webkit-transition : all: 500ms ease-out;
+    -moz-transition: all 500ms ease-out
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+a:hover {
+    
+    color: #999999;
+    
+    text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearanc e: none;
+    margin: 0; 
+}
+
+/* Modal View. Thank You w3schools.com */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height 300px;
+    max-height: 70vh;
+    overflow-y: scroll;
+    
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: animatetop;
+    
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 5px;
+        
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF7933;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
+
+img.thumb {
+    
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: scale-down;
+    border-radius: 50%;
+}
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+div.thumb {
+   height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
