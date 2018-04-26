@@ -13,7 +13,8 @@ body {
     font-size: 30px;
     text-align: center;
     text-decoration: none;
-    background: #3B5998;
+    background: #4728c1;
+    border-radius: 15px;
 }
 
 .fa:hover {
