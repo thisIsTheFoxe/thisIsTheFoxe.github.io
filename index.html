@@ -50,5 +50,63 @@
     <a target="_blank" href="https://github.com/thisisthefoxe" class="fa fa-github"></a>
     <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fa fa-snapchat"></a>
     </footer>
+
+
+<script type="text/javascript">
+    $(function(){
+        $("[id$='circle']").percircle();
+
+        $("#clock").percircle({
+            perclock: true
+        });
+
+        $("#countdown").percircle({
+            perdown: true,
+            secs: 14,
+            timeUpText: 'finally!',
+            reset: true
+        });
+
+        $("#custom").percircle({
+            text:"custom",
+            percent: 27
+        });
+        $("#custom-color").percircle({
+            progressBarColor: "#CC3366",
+            percent: 64.5
+        });
+    });
+
+    $(document).ready(function(){
+        $("#redBecomesBlue").percircle({percent: 61,text: "61"});
+        $("#fiftyTo30").percircle({percent: 51,text: "51"});
+
+        $('#changeCircle').click(function(e){
+            e.preventDefault();
+            changeCircle();
+        });
+        $('#fiftyToThirtyBtn').click(function(e){
+            e.preventDefault();
+            fiftyToThirty();
+        });
+    });
+
+    function changeCircle(){
+        $("#redBecomesBlue").percircle({
+            text: "95.5",
+            percent: 95.5,
+            progressBarColor: "#4f18c0"
+        });
+    }
+
+    function fiftyToThirty(){
+        $("#fiftyTo30").percircle({
+            text: "30",
+            percent: 30,
+            progressBarColor: "#1ec0b0"
+        });
+    }
+</script>
+
   </body>
 </html>
