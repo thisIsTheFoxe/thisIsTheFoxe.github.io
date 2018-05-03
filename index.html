@@ -1,112 +1,124 @@
 <html>
-  <head>
-    <title>thisIsTheFoxe</title>
-    
+    <head>
+        <title>thisIsTheFoxe</title>
+        
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="./percircle.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="./percircle.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-    
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-    
-  </haed>
-  <body>
-    <h1>Hello and welcome to the official website of @thisIsTheFoxe</h1>
-    <a href="./pass/">To my pass</a>
-    <br/>
-    <h3><u>About me</u>:</h3>
-    <p>My name is Henrik Storch and I am 19 Years old from Stuttgart, Germany.<br/>
-      I started developing iOS App back in 2012 with the first Programing laguage i came to know: Objective-C. 
-      It was fun and to be hones more or less just playing around and exporing what one could do with the right tools. </br>
-      After two Years of learning and improving I made the decision to switch from my normal High-School to a more technical High-School which also had Programming Classes.<br/>
-      Three Years later I graduated and started to study Informatics at the Cooperative State University of Baden-Wuerttemberg (DHBW). </p>
-  
-<h3><u>My Skills</u>:</h3>
-      <div id="bluecircle" data-percent="17" class="big percircle animate"><span>Swift</span><div class="slice"><div class="bar" style="transform: rotate(61.2deg);"></div><div class="fill"></div></div></div>
-      
-    </p>
-    <br/>
-    <h2>Here are some of my works:</h2>
-    <h3>Pong Adventure</h3>
-    <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple71/v4/1a/17/11/1a17119d-40ae-1542-96d2-071280431b38/pr_source.png/246x0w.png">
-    <p>This is my fist App which is available on the AppStore. It isn't highly complex and professional, but I developed this App entirely by myself an am very proud that it made it into the store!</p>
-    <p>If you are intersted you can download it: <a href="https://itunes.apple.com/us/app/pong-adventure/id1166251755?mt=8">HERE</a>.
-    <br/>
-    <br/><br/><br/>
-    <footer>
-    <p styles="color:#d7d7d7">Here are some quick links to get in touch with me:</p>
-    <a target="_blank" href="tel:+4915164307951" class="fa fa-phone"></a>
-    <a target="_blank" href="mailto:thisisthefoxe@gmail.com" class="fa fa-envelope"></a>
-    <a target="_blank" href="https://twitter.com/thisisthefoxe" class="fa fa-twitter"></a>
-    <a target="_blank" href="https://www.youtube.com/channel/UCFTjvprHsDO5HP9586Iqr2g" class="fa fa-youtube"></a>
-    <a target="_blank" href="https://www.linkedin.com/in/henrik-storch-3a173a13b" class="fa fa-linkedin"></a>
-    <a target="_blank" href="https://instagram.com/thisisthefoxe" class="fa fa-instagram"></a>
-    <a target="_blank" href="https://github.com/thisisthefoxe" class="fa fa-github"></a>
-    <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fa fa-snapchat"></a>
-    </footer>
-
-
-<script type="text/javascript">
-    $(function(){
-        $("[id$='circle']").percircle();
-
-        $("#clock").percircle({
-            perclock: true
-        });
-
-        $("#countdown").percircle({
-            perdown: true,
-            secs: 14,
-            timeUpText: 'finally!',
-            reset: true
-        });
-
-        $("#custom").percircle({
-            text:"custom",
-            percent: 27
-        });
-        $("#custom-color").percircle({
-            progressBarColor: "#CC3366",
-            percent: 64.5
-        });
-    });
-
-    $(document).ready(function(){
-        $("#redBecomesBlue").percircle({percent: 61,text: "61"});
-        $("#fiftyTo30").percircle({percent: 51,text: "51"});
-
-        $('#changeCircle').click(function(e){
-            e.preventDefault();
-            changeCircle();
-        });
-        $('#fiftyToThirtyBtn').click(function(e){
-            e.preventDefault();
-            fiftyToThirty();
-        });
-    });
-
-    function changeCircle(){
-        $("#redBecomesBlue").percircle({
-            text: "95.5",
-            percent: 95.5,
-            progressBarColor: "#4f18c0"
-        });
-    }
-
-    function fiftyToThirty(){
-        $("#fiftyTo30").percircle({
-            text: "30",
-            percent: 30,
-            progressBarColor: "#1ec0b0"
-        });
-    }
-</script>
-
-  </body>
+        <script type="text/javascript" src="./percircle.js"></script>
+        
+        <link rel="stylesheet" href="./percircle.css">
+            
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="styles.css">
+                    
+                    </haed>
+                    <body>
+                        <h1>Hello and welcome to the official website of @thisIsTheFoxe</h1>
+                        <a href="./pass/">To my pass</a>
+                        <br/>
+                        <div style=" width: 750px;">
+                            <h3><u>About Me</u>:</h3>
+                            <p>My name is Henrik Storch and I am 19 Years old from Stuttgart, Germany.<br/>
+                            I started developing iOS App back in 2012 with the first Programing laguage i came to know: Objective-C.
+                            It was fun and to be hones more or less just playing around and exporing what one could do with the right tools. </br>
+                            After two Years of learning and improving I made the decision to switch from my normal High-School to a more technical High-School which also had Programming Classes.<br/>
+                            Three Years later I graduated and started to study Informatics at the Cooperative State University of Baden-Wuerttemberg (DHBW). </p>
+                        </div>
+                            <h3><u>My Coding-Skills</u>:</h3>
+                            <div style=" height: 275;">
+                            <div id="swiftcircle" data-text="Swift" data-percent="95" class="orange percircle animate gt50">
+                                <span>Swift</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(342deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="objCcircle" data-text="Obj.-C" data-percent="85" class="darkblue percircle animate gt50">
+                                <span>Obj.-C</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(306deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="webcircle" data-text="Web" data-percent="85" class="red percircle animate gt50">
+                                <span>Web-Development</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(288deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="javacircle" data-text="Java" data-percent="80" class="brown percircle animate gt50">
+                                <span>Java</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(288deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="Ccircle" data-text="C/C++" data-percent="80" class="blue percircle animate gt50">
+                                <span>C/C++</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(288deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="assemblercircle" data-text="asm" data-percent="70" class="green percircle animate gt50">
+                                <span>Assembly</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(252deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3><u>My Language Skills</u>:</h3>
+                        <div style=" height: 150px;">
+                            <div id="gercircle" data-text="German" data-percent="100" class="black percircle animate gt50">
+                                <span>German</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(360deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="engcircle" data-text="English" data-percent="100" class="darkblue percircle animate gt50">
+                                <span>English</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(360deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                            <div id="espcircle" data-text="Spanish" data-percent="30" class="yellow percircle animate gt50">
+                                <span>Spanish</span>
+                                <div class="slice">
+                                    <div class="bar" style="transform: rotate(108deg);"></div>
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Here are some of my works:</h2>
+                            <h3>Pong Adventure</h3>
+                            <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple71/v4/1a/17/11/1a17119d-40ae-1542-96d2-071280431b38/pr_source.png/246x0w.png">
+                                <p>This is my fist App which is available on the AppStore. It isn't highly complex and professional, but I developed this App entirely by myself an am very proud that it made it into the store!</p>
+                                <p>If you are intersted you can download it: <a href="https://itunes.apple.com/us/app/pong-adventure/id1166251755?mt=8">HERE</a>.
+                        </div>
+                        <footer>
+                            <p styles="color:#d7d7d7">Here are some quick links to get in touch with me:</p>
+                            <a target="_blank" href="tel:+4915164307951" class="fa fa-phone"></a>
+                            <a target="_blank" href="mailto:thisisthefoxe@gmail.com" class="fa fa-envelope"></a>
+                            <a target="_blank" href="https://twitter.com/thisisthefoxe" class="fa fa-twitter"></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCFTjvprHsDO5HP9586Iqr2g" class="fa fa-youtube"></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/henrik-storch-3a173a13b" class="fa fa-linkedin"></a>
+                            <a target="_blank" href="https://instagram.com/thisisthefoxe" class="fa fa-instagram"></a>
+                            <a target="_blank" href="https://github.com/thisisthefoxe" class="fa fa-github"></a>
+                            <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fa fa-snapchat"></a>
+                        </footer>
+                        
+                        <script type="text/javascript">
+                            $(function(){
+                              $("[id$='circle']").percircle();
+                              });
+                              
+                            </script>
+                        
+                    </body>
 </html>
+

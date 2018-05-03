@@ -14,19 +14,47 @@
 .percircle.dark:hover > span {
   color: #c6ff00;
 }
+.percircle.black .bar,
+.percircle.black .fill {
+    border-color: #000;
+}
+.percircle.black:hover > span {
+    color: #000;
+}
+.percircle.black.dark .bar,
+.percircle.black.dark .fill {
+    border-color: #000;
+}
+.percircle.black.dark:hover > span {
+    color: #000;
+}
 .percircle.red .bar,
 .percircle.red .fill {
-  border-color: #dd5454;
+    border-color: #bd232a;
 }
 .percircle.red:hover > span {
-  color: #dd5454;
+    color: #bd232a;
 }
 .percircle.red.dark .bar,
 .percircle.red.dark .fill {
-  border-color: #f84a4a;
+  border-color: #bd232a;
 }
 .percircle.red.dark:hover > span {
-  color: #f84a4a;
+  color: #bd232a;
+}
+.percircle.brown .bar,
+.percircle.brown .fill {
+    border-color: #BC8F8F;
+}
+.percircle.brown:hover > span {
+    color: #BC8F8F;
+}
+.percircle.brown.dark .bar,
+.percircle.brown.dark .fill {
+    border-color: #f84a4a;
+}
+.percircle.brown.dark:hover > span {
+    color: #f84a4a;
 }
 .percircle.blue .bar,
 .percircle.blue .fill {
@@ -42,6 +70,7 @@
 .percircle.blue.dark:hover > span {
   color: #20cceb;
 }
+
 .percircle.green .bar,
 .percircle.green .fill {
   border-color: #8dea7b;
@@ -58,17 +87,17 @@
 }
 .percircle.orange .bar,
 .percircle.orange .fill {
-  border-color: #e88239;
+    border-color: #fe2c1f;
 }
 .percircle.orange:hover > span {
-  color: #e88239;
+    color: #fe2c1f;
 }
 .percircle.orange.dark .bar,
 .percircle.orange.dark .fill {
-  border-color: #dc5b00;
+    border-color: #f84a4a;
 }
 .percircle.orange.dark:hover > span {
-  color: #dc5b00;
+    color: #f84a4a;
 }
 .percircle.pink .bar,
 .percircle.pink .fill {
