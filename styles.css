@@ -10,11 +10,12 @@ body {
 }
 
 .fa {
-    padding: 10px;
+    padding: 12px;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
     background: #2b3ce4;
+    margin: 20px 5px;
     border-radius: 15px;
 }
 
