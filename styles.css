@@ -29,13 +29,11 @@ body.history {
     
 }
 @supports not (-webkit-overflow-scrolling: touch) {
-    /* CSS specific to iOS devices */
     .about {
-        width: 750px;
+        width: 757px;
     }
 }
 @supports (-webkit-overflow-scrolling: touch) {
-    /* CSS specific to iOS devices */
     .about {
         width: 400px;
     }
