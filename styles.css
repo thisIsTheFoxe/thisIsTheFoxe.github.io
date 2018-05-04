@@ -99,7 +99,8 @@ div.card {
 button {
     
     height: 40px;
-    width: 100px;
+    width: 175px;
+    margin: 50px 0px;
     background-color: #888888;
     text-align: center;
     font-size: 25px;
@@ -108,7 +109,6 @@ button {
     border-color: transparent;
     border-radius: 5px;
     border-width: 1px;
-    margin-top: 15px;
     
     -webkit-transition : background-color 500ms ease-out;
     -moz-transition : background-color 500ms ease-out;
