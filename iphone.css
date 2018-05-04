@@ -28,18 +28,7 @@ body.history {
     background-color: #dddddd
     
 }
-@supports not (-webkit-overflow-scrolling: touch) {
-    /* CSS specific to iOS devices */
-    .about {
-        width: 750px;
-    }
-}
-@supports (-webkit-overflow-scrolling: touch) {
-    /* CSS specific to iOS devices */
-    .about {
-        width: 400px;
-    }
-}
+
 div {
     
     margin: auto;
