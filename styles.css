@@ -1,3 +1,14 @@
+/* Plate Orange: #FF7933; */
+body {
+    
+    background-color: white;
+    font-family: "HelveticaNeue-Light", sans-serif;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+}
+
 .fa {
     padding: 12px;
     font-size: 30px;
@@ -31,14 +42,6 @@ body.history {
     }
 }
 @supports (-webkit-overflow-scrolling: touch) {
-    body {
-        background-color: white;
-        font-family: "HelveticaNeue-Light", sans-serif;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0px 10px;
-    }
     .about {
         width: 400px;
     }
