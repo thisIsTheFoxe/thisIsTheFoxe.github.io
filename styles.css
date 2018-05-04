@@ -17,7 +17,7 @@ body.history {
     background-color: #dddddd
     
 }
-@supports not (-webkit-overflow-scrolling: touch) {
+@media only screen and (max-width: 750px) {
     body {
         background-color: white;
         font-family: "HelveticaNeue-Light", sans-serif;
@@ -30,7 +30,7 @@ body.history {
         width: 757px;
     }
 }
-@supports (-webkit-overflow-scrolling: touch) {
+@media not screen and (max-width: 750px) {
     body {
         background-color: white;
         font-family: "HelveticaNeue-Light", sans-serif;
