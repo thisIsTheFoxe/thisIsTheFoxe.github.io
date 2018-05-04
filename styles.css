@@ -17,7 +17,7 @@ body.history {
     background-color: #dddddd
     
 }
-@media only screen and (max-width: 750px) {
+@media not screen and (max-width: 750px) {
     body {
         background-color: white;
         font-family: "HelveticaNeue-Light", sans-serif;
@@ -30,7 +30,7 @@ body.history {
         width: 757px;
     }
 }
-@media not screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     body {
         background-color: white;
         font-family: "HelveticaNeue-Light", sans-serif;
