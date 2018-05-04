@@ -1,14 +1,3 @@
-/* Plate Orange: #FF7933; */
-body {
-    
-    background-color: white;
-    font-family: "HelveticaNeue-Light", sans-serif;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0px;
-}
-
 .fa {
     padding: 12px;
     font-size: 30px;
@@ -29,11 +18,28 @@ body.history {
     
 }
 @supports not (-webkit-overflow-scrolling: touch) {
+    body {
+        background-color: white;
+        font-family: "HelveticaNeue-Light", sans-serif;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+    }
     .about {
         width: 757px;
     }
 }
 @supports (-webkit-overflow-scrolling: touch) {
+    body {
+        background-color: white;
+        font-family: "HelveticaNeue-Light", sans-serif;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0px 10px;
+        margin: 0px;
+    }
     .about {
         width: 400px;
     }
