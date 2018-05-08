@@ -29,7 +29,7 @@ body.history {
         width: 757px;
     }
 @media only screen and (max-width: 750px) {
-    body {
+    div {
         padding: 0px 10px;
     }
     .about {
