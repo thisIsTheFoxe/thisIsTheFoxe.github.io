@@ -26,7 +26,12 @@ body {
     text-align: center;
     margin: 0px;
 }
-
+.small-rings{
+    height:120px;
+}
+.big-rings{
+    height:240px;
+}
 .about {
     width: 757px;
 }
@@ -326,13 +331,21 @@ input[type=number]::-webkit-outer-spin-button {
     div {
 	width: 100%;
     }
+	
     .text{
 	padding: 0px 10px;
 	    width: 100%;
     }
-	.about{
+    
+     .about{
 	padding: 0px 10px;
 	    width: 100%;
+    }
+    .small-rings{
+    	height:240px;
+    }
+    .big-rings{
+   	 height:360px;
     }
 }
 
