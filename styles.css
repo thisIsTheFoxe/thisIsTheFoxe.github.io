@@ -33,10 +33,11 @@ body {
 
 @media only screen and (max-width: 750px) {
     div {
+			size: 100%;
         margin: 0px 10px;
     }
     .about {
-        width: 400px;
+        width: 100%;
 			
     }
 }
@@ -44,7 +45,7 @@ div {
     
     margin: auto;
     margin-bottom: 15px;
-    width: 400px;
+    width: 450px;
     
     
     text-align: center;
