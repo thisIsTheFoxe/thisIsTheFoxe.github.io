@@ -30,17 +30,6 @@ body {
 .about {
     width: 757px;
 }
-
-@media only screen and (max-width: 750px) {
-    div {
-			width: 100%;
-        margin: 0px 10px;
-    }
-    .about {
-        width: 100%;
-			
-    }
-}
 div {
     
     margin: auto;
@@ -331,6 +320,17 @@ input[type=number]::-webkit-outer-spin-button {
     border-width: 1px;
     border-radius: 5px;
         
+}
+
+@media only screen and (max-width: 750px) {
+    div {
+			width: 100%;
+        margin: 0px 10px;
+    }
+    .about {
+        width: 100%;
+			
+    }
 }
 
 /* The Close Button */
