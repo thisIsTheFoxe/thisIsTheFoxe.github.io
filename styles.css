@@ -30,7 +30,7 @@ body {
     height:120px;
 }
 .big-rings{
-    height:240px;
+    height:250px;
 }
 .about {
     width: 757px;
@@ -342,10 +342,10 @@ input[type=number]::-webkit-outer-spin-button {
 	    width: 100%;
     }
     .small-rings{
-    	height:240px;
+    	height:250px;
     }
     .big-rings{
-   	 height:360px;
+   	 height:375px;
     }
 }
 
