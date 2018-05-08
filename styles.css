@@ -17,23 +17,27 @@ body.history {
     background-color: #dddddd
     
 }
-    body {
-        background-color: white;
-        font-family: "HelveticaNeue-Light", sans-serif;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0px;
-    }
-    .about {
-        width: 757px;
-    }
+
+body {
+    background-color: white;
+    font-family: "HelveticaNeue-Light", sans-serif;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+}
+
+.about {
+    width: 757px;
+}
+
 @media only screen and (max-width: 750px) {
     div {
-        padding: 0px 10px;
+        margin: 0px 10px;
     }
     .about {
         width: 400px;
+			
     }
 }
 div {
