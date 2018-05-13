@@ -13,9 +13,7 @@
 }
 
 body.history {
-    
     background-color: #dddddd
-    
 }
 
 body {
@@ -36,54 +34,35 @@ body {
     width: 757px;
 }
 div {
-    
     margin: auto;
     margin-bottom: 15px;
     width: 450px;
-    
-    
     text-align: center;
-    
     background-color: transparent;
-    
     border-color: transparent;
-    
     border-width: 1px;
-
     align-items: center;
-    
 }
 
 div.round {
-    
     border-radius: 15px;
-    
 }
 
-
-
 div.bg {
-    
     background-color: transparent;
     height: 100%;
     width: 100%;
-    
 }
 
 div.shadow {
-       
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 div.clear {
-    
     background-color: transparent;
-
 }
 
 div.bottom {
-    
     bottom: 0px;
     border-radius: 0px;
     border-color: darkgray;
@@ -91,19 +70,15 @@ div.bottom {
     width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    position: fixed ; 
-    
+    position: fixed ;
 }
 
 div.card {
-
     border-radius: 0px;
-
 }
 
 
 button {
-    
     height: 40px;
     width: 175px;
     margin: 50px 0px;
@@ -120,34 +95,25 @@ button {
     -moz-transition : background-color 500ms ease-out;
     -o-transition : background-color 500ms ease-out;
     transition: background-color 500ms ease-out;
-    
 }
 
 button:active {
-    
     background-color: #FF7933;
-    
 }
 
 button.enabled {
-    
     background-color: #888888;
-    
 }
 
 button:hover {
-    
     background-color: #FF7933;
     
 }
 .bottom-margin {
-    
     margin-bottom: 15px;
-    
 }
 
 input {
-    
     margin: auto;
     margin-top: 10px;
     text-align: center;
@@ -163,7 +129,6 @@ input {
     -moz-transition : border 500ms ease-out;
     -o-transition : border 500ms ease-out;
     transition: border 500ms ease-out;
-      
 }
 
 input[type="number"] {
@@ -172,25 +137,20 @@ input[type="number"] {
 }
 
 input:focus {
-    
     outline: none;
     border-bottom-color: #FF7933;
 }
 
 h1 {
-    
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-size: 30px;
     padding-top: 15px;
     margin-bottom: 30px;
-    color: #999; 
-    
+    color: #999;
 }
 
 h1.light {
-    
     color: #ababab;
-    
 }
 
 p {
@@ -209,32 +169,26 @@ h3 {
 
 
 footer {
-    
     background-color: #555555;
     text-align: center;
     padding: 10px 0px;
     margin-top: 75px;
     font-family: "Ariel", sans-serif;
-     
 }
 
 table {
-    
     border-collapse: collapse;
     margin: auto;
     width: 50%;
     margin-bottom: 15px;
-    
 }
 
 .vert-align {
-    
     position: relative;
     top: 50%;
     transform: perspective(1px) translateY(-50%);
     margin: 1px;
     padding: 1px;
-
 }
 
 
@@ -246,21 +200,15 @@ td,th {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    
 }
 
 tr,nth-child(even) {
-    
     background-color: lightgray;
-    
 }
 
 a {
-    
     color : #FF7933;
-    
     font-weight: 500;
-    
     text-decoration: none;
     
     -webkit-transition : all: 500ms ease-out;
@@ -270,9 +218,7 @@ a {
 }
 
 a:hover {
-    
     color: #999999;
-    
     text-decoration: none;
 }
 
@@ -283,8 +229,6 @@ input[type=number]::-webkit-outer-spin-button {
     appearanc e: none;
     margin: 0; 
 }
-
-/* Modal View. Thank You w3schools.com */
 
 /* The Modal (background) */
 .modal {
@@ -325,20 +269,18 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: transparent;
     border-width: 1px;
     border-radius: 5px;
-        
 }
 
 @media only screen and (max-width: 750px) {
     div {
-	width: 100%;
+        width: 100%;
     }
 	
     .text{
-	width: 100%;
+        width: 100%;
     }
     
      .about{
-         background-color:red;
 	    width: 100%;
     }
     .small-rings{
@@ -350,7 +292,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 @media only screen and (max-height: 414px) {
     p{
-        color: blue;
         font-size: 10px;
     }
 }
@@ -391,8 +332,6 @@ input[type=number]::-webkit-outer-spin-button {
     to {opacity: 1}
 }
 
-
-
 img.thumb {
     
     min-height: 100%;
@@ -400,8 +339,6 @@ img.thumb {
     object-fit: scale-down;
     border-radius: 50%;
 }
-
-
 
 input[type="file"] {
     display: none;
