@@ -346,9 +346,6 @@ input[type=number]::-webkit-outer-spin-button {
     .big-rings{
    	 height:375px;
     }
-    .percicle{
-		 margin: 0 0.1em 0.1em 0.2em;
-	 }
 }
 
 /* The Close Button */
