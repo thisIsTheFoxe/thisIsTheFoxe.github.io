@@ -298,6 +298,9 @@ input[type=number]::-webkit-outer-spin-button {
         color:#d7d7d7;
         font-size: 20px;
     }
+    .dark{
+        color:#999
+    }
 }
 
 /* The Close Button */
