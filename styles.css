@@ -284,10 +284,10 @@ input[type=number]::-webkit-outer-spin-button {
 	    width: 100%;
     }
     .small-rings{
-    	height:250px;
+    	height:275px;
     }
     .big-rings{
-   	 height:375px;
+   	 height:400px;
     }
 }
 @media only screen and (max-height: 414px) {
