@@ -301,6 +301,12 @@ input[type=number]::-webkit-outer-spin-button {
     .dark{
         color:#999
     }
+    .small-rings{
+    	height:200px;
+    }
+    .big-rings{
+   	 height:350px;
+    }
 }
 
 /* The Close Button */
