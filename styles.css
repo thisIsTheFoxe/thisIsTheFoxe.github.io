@@ -113,6 +113,10 @@ button:hover {
     margin-bottom: 15px;
 }
 
+.accept{
+    width: 300px;
+}
+
 input {
     margin: auto;
     margin-top: 10px;
