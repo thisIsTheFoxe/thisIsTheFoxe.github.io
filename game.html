@@ -4,9 +4,88 @@
         
         <noscript>Please Enable JavaScript to enjoy this Website with all it's features :)</noscript>
 
-        <script src="./https.js"></script>
         <body>
-        <canvas id="game" height="300" width="300" border="solid black 2px"></canvas>
+            <canvas id="game" height="300" width="300" style="border:solid 2px black"></canvas><br/>
+            <button onclick="start()">Start!</button>
         </body>
+        
+        <script>
+            let canvas = document.getElementById("game").getContext('2d');
+            canvas.lineJoin = "round"
+            addEventListener("keypress", handle);
+            
+            let pt = 0
+            let timerID = 0
+            let speed = 200
+            let x = 150
+            let y = 150
+            let dir = 3 //o, r, u, l
+            function start(){
+                timerID = setInterval(play, speed);
+            }
+        function play(){
+            console.log(x,y);
+            canvas.beginPath();
+            canvas.moveTo(x,y);
+            switch (dir){
+                case 0: x -= 2; break
+                case 1: y -= 2; break
+                case 2: x += 2; break
+                case 3: y += 2; break
+                default: console.log(dir, "ERR"); break;
+            }
+            
+            if(canvas.getImageData(x,y,2,2).data[3] != 0){
+                gameOver()
+                return
+            }else if(x > 305){
+                gameOver();
+                return
+            }else if (y > 305) {
+                gameOver()
+                return
+            }else if (y < -5){
+                gameOver()
+                return
+            }else if (x < -5){
+                gameOver()
+                return
+            }
+            
+            
+            
+            canvas.lineTo(x,y);
+            canvas.stroke();
+            
+            pt += 1
+            
+            if (pt % 15 == 0){
+                speed -= 5
+                clearTimeout(timerID)
+                start()
+            }
+            
+        }
+        
+        function gameOver(){
+            clearTimeout(timerID);
+            canvas.clearRect(0, 0, 300, 300);
+            
+            x = 150
+            y = 150
+            speed = 250
+            dir = 3
+        }
+        
+        function handle(e){
+            console.log(e.key);
+            switch(e.key){
+                case 'a': dir = (dir+1) % 4; break
+                case 'd': dir = dir = dir <= 0 ? 3: --dir
+            }
+        }
+        
+            
+        </script>
         
 </html>
