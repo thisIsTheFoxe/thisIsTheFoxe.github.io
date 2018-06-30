@@ -76,6 +76,11 @@ div.card {
     border-radius: 0px;
 }
 
+hr {
+    margin: 20px 75px;
+    height: 2px;
+    background-color: #AAA;
+}
 
 button {
     height: 40px;
@@ -308,11 +313,8 @@ input[type=number]::-webkit-outer-spin-button {
     .dark{
         color:#999
     }
-    .small-rings{
-    	height:200px;
-    }
     .big-rings{
-   	 height:350px;
+   	 height:260px;
     }
 }
 
