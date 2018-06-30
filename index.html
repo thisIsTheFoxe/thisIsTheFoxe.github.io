@@ -30,8 +30,8 @@
                         <div class="about">
                             <h3><u>About Me</u>:</h3>
                             <img style="height:250px;width:250px;" src="./profile.jpg"/>
-                            <p>My name is Henrik Storch and I am 19 Years old from Stuttgart, Germany.<br/>
-                            I started developing iOS App back in 2012 with the first Programing laguage i came to know: Objective-C.
+                            <p>My name is Henrik Storch and I am <span id="age"></span> Years old and live in Stuttgart, Germany.<br/>
+                            I started developing iOS App back in 2012 with the first Programing laguage I came to know: Objective-C.
                             It was fun and to be hones more or less just playing around and exporing what one could do with the right tools. </br>
                             After two Years of learning and improving I made the decision to switch from my normal High-School to a more technical High-School which also had Programming Classes.<br/>
                             Three Years later I graduated and started to study Informatics at the Cooperative State University of Baden-Wuerttemberg (DHBW). <br/><br/>
@@ -153,7 +153,8 @@
                             $(function(){
                               $("[id$='circle']").percircle();
                             });
-                              
+                            
+                              document.getElementById("age").innerHTML = (new Date(Date.now() - 897516000000)).getUTCFullYear() - 1970
                             </script>
                         
                     </body>
