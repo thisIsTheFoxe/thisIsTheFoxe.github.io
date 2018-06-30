@@ -78,8 +78,9 @@ div.card {
 
 hr {
     margin: 20px 75px;
-    height: 2px;
-    background-color: #AAA;
+    height: 3px;
+    size: 3px;
+    background-color: #0AA;
 }
 
 button {
