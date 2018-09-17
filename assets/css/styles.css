@@ -355,6 +355,12 @@ input[type=number]::-webkit-outer-spin-button {
     to {opacity: 1}
 }
 
+.icon{
+        border-radius: 20%;
+        height: 300px;
+        width: 300px;
+}
+
 img.thumb {
     
     min-height: 100%;
