@@ -383,10 +383,6 @@ input[type=number]::-webkit-outer-spin-button {
         width: 300px;
 }
 
-img{
-    padding: 20px;
-}
-
 img.thumb {
     
     min-height: 100%;
