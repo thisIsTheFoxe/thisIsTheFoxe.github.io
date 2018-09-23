@@ -20,10 +20,27 @@
 
         
         <link rel="stylesheet" href="./assets/css/percircle.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="./assets/css/styles.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("toTopBtn").style.display = "block";
+                } else {
+                    document.getElementById("toTopBtn").style.display = "none";
+                }
+            }
+        
+        function topFunction() {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        }
+        </script>
     </haed>
                     <body>
+                        <i class="fas fa-arrow-alt-circle-up" id="toTopBtn" onclick="topFunction()"></i>
                         <h1>Official website of @thisIsTheFoxe</h1>
                         <button onclick="window.location.href='./pass/'">To my pass</button>
                         <br/>
@@ -147,29 +164,29 @@
                                 I really enjoyed it and it increased my interest in technology.<br/>
                                 More Information <a href="https://www.ko-ma.net">HERE</a>.
                                 </p>
-                            <h1>My Work:</h1>
-                            <h3>(TicTacToe)&sup3;</h3>
+                            <h1 id="my_work">My Work:</h1>
+                            <h3 id="TTT3">(TicTacToe)&sup3;</h3>
                             <img class="icon" src="./assets/images/TTTIcon.png">
                                 <p>This is one of the very first 3D AR Multiplayer experiences. Combining the classic TicTacToe with the newest technologies, creating an outstanding game for you and your friends.<br/>
                                 If you are intersted you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/tictactoe/id1412179757?ls=1&mt=8">HERE</a>.<br/>(First release: 2018)<br/>
                                 </p>
-                                <h3>Pong Adventure</h3>
+                                <h3 id="pongAdventure">Pong Adventure</h3>
                                 <img class="icon" src="./assets/images/PongIcon.png">
                                     <p>This is my fist App which is available on the AppStore&trade;. It isn't highly complex and professional, but I developed this App entirely by myself an am very proud that it made it into the store!<br/>
                                     If you are intersted you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/pong-adventure/id1166251755?mt=8">HERE</a>.<br/>(First release: 2014)<br/>
-                                    Furthermore, if you want to help me developing this app and maybe even have suggestions, feel free to <a target="_blank" href="https://pong-adventure.herokuapp.com">sign up for BetaTesting</a> and thereby agreeing to <a href="./BetaAgreement">this agreement</a> (currently not available).
+                                    Furthermore, if you want to help me developing this app and maybe even have suggestions, feel free to <a target="_blank" href="https://pong-adventure.herokuapp.com">sign up for BetaTesting</a> and thereby agreeing to <a href="./BetaAgreement">this agreement</a>.
                                     </p>
                         </div>
                         <footer>
                             <p class="contactMe">Here are some quick links to get in touch with me:</p>
                             <a target="_blank" href="tel:+4915164307951" class="fa fa-phone"></a>
                             <a target="_blank" href="mailto:thisisthefoxe@gmail.com" class="fa fa-envelope"></a>
-                            <a target="_blank" href="https://twitter.com/thisisthefoxe" class="fa fa-twitter"></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCFTjvprHsDO5HP9586Iqr2g" class="fa fa-youtube"></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/henrik-storch-3a173a13b" class="fa fa-linkedin"></a>
-                            <a target="_blank" href="https://instagram.com/thisisthefoxe" class="fa fa-instagram"></a>
-                            <a target="_blank" href="https://github.com/thisisthefoxe" class="fa fa-github"></a>
-                            <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fa fa-snapchat"></a>
+                            <a target="_blank" href="https://twitter.com/thisisthefoxe" class="fab fa-twitter"></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCFTjvprHsDO5HP9586Iqr2g" class="fab fa-youtube"></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/henrik-storch-3a173a13b" class="fab fa-linkedin"></a>
+                            <a target="_blank" href="https://instagram.com/thisisthefoxe" class="fab fa-instagram"></a>
+                            <a target="_blank" href="https://github.com/thisisthefoxe" class="fab fa-github"></a>
+                            <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fab fa-snapchat"></a>
                             <br/>
                             <a href="./imprint.html">Imprint</a> &nbsp;&nbsp;
                             <a href="./PrivacyPolicy.html">Privacy Policy</a>
