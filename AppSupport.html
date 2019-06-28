@@ -31,9 +31,13 @@
                 <select id="kind">
                     <option value="bug">I have a problem</option>
                     <option value="idea">Idea and other feedback</option>
-                </select><br/>                <textarea id="text"></textarea><br/>
-                <button onclick="send()">Send Feedback</button>
+                </select><br/>
+                <textarea id="text"></textarea><br/>
+                <button onclick="send()">Continue</button>
+                <br/>
+                <a href="../">Back to main page...</a>
                 
+                <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
                 <script>
                     autosize(document.getElementById("text"));
                     function send(){
@@ -44,10 +48,13 @@
                         var link = "mailto:"+mail
                         + "?subject=" + escape(subject)
                         + "&body=" + escape(text);
+                        var pid = window.setInterval(function() {
+                            window.location.href = "../";
+                            typeof pid !== 'undefined' && window.clearInterval(pid);
+                        }, 1000);
                         window.location.href = link;
                     }
                 </script>
-                <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
         </body>
 </html>
 
