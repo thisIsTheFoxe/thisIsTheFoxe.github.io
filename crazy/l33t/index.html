@@ -1,4 +1,6 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8" /> 
 <title>L33T_SP34K</title>
 <script>
@@ -8,13 +10,15 @@
 <script src="./l33t.js"></script></head>
 <body>
 <label>Expected Output of code:</label><br/><textarea style="height:250px; width:500px" id="resultOfCode"></textarea><br/>
-<button onclick="decompile()">Create Code</button> <button display="none" onclick="document.getElementById('leetResult').select();document.execCommand('copy');window.getSelection().removeAllRanges();">Copy to Clipboard</button><br/><br/>
-<textarea id="leetResult" style=" height:250px; width:500px;background-color:grey;" readonly="readonly"></textarea>
+<button onclick="decompile()">Create Code</button><br/><br/>
+<label>Code that produces expected output:</label><br/>
+<textarea id="leetResult" style=" height:250px; width:500px;background-color:grey;" readonly="readonly"></textarea><br/>
+<button onclick="document.getElementById('leetResult').select();document.execCommand('copy');window.getSelection().removeAllRanges();">Copy Code to Clipboard</button>
 <hr/>
 <label>L33T Sourcecode:</label><br/><textarea style="height:250px; width:500px" id="code"></textarea><br/>
-<label>L33T Input:</label><br/><textarea style=" height:100px; width:300px" id="input"></textarea>
-<br/>
-<button onclick="run()">Run l33t Code</button><br/>
-<textarea id="output" style=" height:100px; width:500px;background-color:grey;" readonly="readonly"></textarea><br/>
+<label>L33T Input:</label><br/><textarea style=" height:100px; width:300px" id="input"></textarea><br/>
+<button onclick="run()">Run l33t Code</button>
+<br/><br/>
+<label>L33T Output:</label><br/><textarea id="output" style=" height:100px; width:500px;background-color:grey;" readonly="readonly"></textarea><br/>
 </body>
 </html>
