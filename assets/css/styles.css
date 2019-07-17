@@ -65,7 +65,7 @@ div.bottom {
     bottom: 0px;
     border-radius: 0px;
     border-color: darkgray;
-    height: 100;
+    height: 100pt;
     width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -81,7 +81,6 @@ hr {
     border-radius: 7px 7px 7px 7px;
     margin: 20px 75px;
     height: 3px;
-    size: 3px;
     background-color: #AAA;
 }
 
@@ -238,7 +237,7 @@ footer {
 }
 
 footer > a {
-    font-size: 10;
+    font-size: 10pt;
     margin: 10px;
 }
 
@@ -268,7 +267,7 @@ td,th {
     padding-bottom: 5px;
 }
 
-tr,nth-child(even) {
+tr: nth-child(even) {
     background-color: lightgray;
 }
 
@@ -278,9 +277,9 @@ a {
     text-decoration: none;
     
     -webkit-transition : all: 500ms ease-out;
-    -moz-transition: all 500ms ease-out
-    -o-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+    -moz-transition: all: 500ms ease-out
+    -o-transition: all: 500ms ease-out;
+    transition: all: 500ms ease-out;
 }
 
 a:hover {
@@ -292,7 +291,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearanc e: none;
+    appearance: none;
     margin: 0; 
 }
 
