@@ -1,28 +1,28 @@
  function pi2bf(str){
-  let string = str
-  let out = ""
-  let t = { 0:'>', 1:'<', 2:'+', 3:'-', 4:'.', 5:',', 6:'[', 7:']' }
-  let k = 2
-  let a = 4
-  let b = 1
-  let a1 = 12
-  let b1 = 4
-  let r = true
+  var string = str
+  var out = ""
+  var t = { 0:'>', 1:'<', 2:'+', 3:'-', 4:'.', 5:',', 6:'[', 7:']' }
+  var k = 2
+  var a = 4
+  var b = 1
+  var a1 = 12
+  var b1 = 4
+  var r = true
 
   while(r){
-    let p = k*k
-    let q = 2*k+1
-    let k = k+1
+    var p = k*k
+    var q = 2*k+1
+    k = k+1
     a = a1
     b = b1
     a1 = p*a+q*a1
     b1 = p*b+q*b1
     
-    let d = Math.round(a/b)
-    let d1 = Math.round(a1/b1)
+    var d = Math.round(a/b)
+    var d1 = Math.round(a1/b1)
     
     while(d==d1){
-      let c = ""
+      var c = ""
       if(string.length){
         c = string[0]
         string = string.slice(1)
