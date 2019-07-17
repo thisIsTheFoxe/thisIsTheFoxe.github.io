@@ -329,7 +329,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: animatetop;
+    animation-duration: 0.4s;
     
     border-color: transparent;
     border-width: 1px;
