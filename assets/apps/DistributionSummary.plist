@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NO_MAS.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>4B21A913741E106C99B462EAFB64022C9E85E0C5</string>
+				<key>dateExpires</key>
+				<string>7/18/20</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>E3BNAMEWTS.com.thisisthefoxe.NO-MAS</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>E3BNAMEWTS</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>E3BNAMEWTS.com.thisisthefoxe.NO-MAS</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>NO_MAS.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>5db07041-d439-4708-af61-748e9c31ed4f</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.thisisthefoxe.NO-MAS</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>E3BNAMEWTS</string>
+				<key>name</key>
+				<string>Henrik Storch</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
