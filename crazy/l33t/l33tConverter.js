@@ -76,7 +76,7 @@ function decompile(){
         ptr += 1;
     }
     theSourceCode[ptr+1] = -1;
-    console.log(theSourceCode)
+    //console.log(theSourceCode)
     //console.log(interpret(theSourceCode))
     //var src = srcCode;
     
