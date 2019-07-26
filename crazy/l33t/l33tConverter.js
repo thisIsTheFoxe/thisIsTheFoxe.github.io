@@ -47,7 +47,7 @@ function decompile(){
         "w":["\\/\\/", "vv"],
         "v":["\\/"],
         "o":["0", "()"],
-        "u":["ü"],
+        "u":["Ü", "ü"],
         "c":["(", "©"]
     }
     
@@ -151,6 +151,7 @@ function decompile(){
     }
     
     var prevWord = "art";
+    
     function getNewWordWithSum(sum){
         if(sum < 0) sum = 10;
         let newWord = ""
@@ -246,8 +247,6 @@ function decompile(){
         }
         return cloneWord + " ";
     }
-    
-    
     
     //theSourceCode = [7, 9, 7, 9, 7, 9, 1, 10]
     
