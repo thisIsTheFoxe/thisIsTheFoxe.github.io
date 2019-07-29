@@ -1,9 +1,53 @@
+function getSummingItems(a,t){
+    return a.reduce((h,n) => Object.keys(h)
+                    .reduceRight((m,k) => +k+n <= t ? (m[+k+n] = m[+k+n] ? m[+k+n].concat(m[k].map(sa => sa.concat(n)))
+                                                       : m[k].map(sa => sa.concat(n)),m)
+                                 :  m, h), {0:[[]]})[t];
+}
+
+String.prototype.sum = function(){
+    if(this.length < 1) return -1;
+    var s = 0;
+    for(var i = 0; i<this.length;i++){
+        if(this[i] >= '0' && this[i] <= '9') s += (this[i] - '0');
+    }
+    return s;
+};
+
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+Array.prototype.rotate = function(n) {
+    return this.slice(n, this.length).concat(this.slice(0, n));
+}
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    
+    return array;
+}
+
 function decompile(){
     console.time()
     let srcCode = document.getElementById("code").value
     let out = document.getElementById("leetResult")
     out.innerHTML = "";
     let theResult = document.getElementById("resultOfCode").value
+    let customSource = document.getElementById("textInput").value
     
     //	console.log(srcCode)
     
@@ -80,7 +124,6 @@ function decompile(){
     //console.log(interpret(theSourceCode))
     //var src = srcCode;
     
-    
     let jsonWords = {
         "n":  ["ich", "sie", "er", "du", "es", "wir", "ihr", "gott", "alles", "frau", "morgen", "vater", "person", "tag", "weg", "ordnung", "mädchen", "hertz", "stunde", "seite", "schatz", "film", "zeit", "mann", "geld", "liebe", "typ", "tochter", "sohn", "bleibt"],
         "art":["der", "den", "die", "das", "einen", "eine", "einer", "dem", "meine", "mein", "kein", "jedes", "jeder", "dein", "deine", "aller", "alle", "irgendein", "irgendeine"],
@@ -88,52 +131,6 @@ function decompile(){
         "prä":["als", "mit", "um", "auf", "aus", "für", "an", "von", "in", "über", "unter", "zwischen", "neben", "ohne", "gegen" , "zu"],
         "v":  ["wird", "ist", "hat", "kann", "geht", "läuft", "rennt", "liegt", "sind", "war", "hasst", "macht", "will", "sieht", "zeigt", "sagt", "wartet", "tut", "trinkt", "isst", "gefällt", "läasst", "weiß", "muss", "kommt", "lebt"],
         "adj":["gut", "schlecht", "schnell", "langsam", "glücklich", "froh", "wütend", "traurig", "hilflos", "sicher", "schwer", "einfach", "kurz", "groß", "klein"]
-    }
-    
-    
-    if (!String.prototype.sum){
-        String.prototype.sum = function(){
-            if(this.length < 1) return -1;
-            var s = 0;
-            for(var i = 0; i<this.length;i++){
-                if(this[i] >= '0' && this[i] <= '9') s += (this[i] - '0');
-            }
-            return s;
-        };
-    };
-    
-    function getSummingItems(a,t){
-        return a.reduce((h,n) => Object.keys(h)
-                        .reduceRight((m,k) => +k+n <= t ? (m[+k+n] = m[+k+n] ? m[+k+n].concat(m[k].map(sa => sa.concat(n)))
-                                                           : m[k].map(sa => sa.concat(n)),m)
-                                     :  m, h), {0:[[]]})[t];
-    }
-    
-    String.prototype.replaceAt=function(index, replacement) {
-        return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
-    }
-    
-    Array.prototype.rotate = function(n) {
-        return this.slice(n, this.length).concat(this.slice(0, n));
-    }
-    
-    function shuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
-        
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-            
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-            
-            // And swap it with the current element.
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-        }
-        
-        return array;
     }
     
     
@@ -152,9 +149,112 @@ function decompile(){
     
     var prevWord = "art";
     
-    function getNewWordWithSum(sum){
+    var customWords = customSource.split(' ')
+    var customWordIx = 0
+    
+    function getNewWordWithSum(sum, pCmd){
         if(sum < 0) sum = 10;
         let newWord = ""
+        
+        if(document.getElementById("maualInput").checked){
+            
+            newWord = customWords[customWordIx]
+            customWordIx++
+            
+            if(newWord == undefined){ throw("Not enought words"); return }
+            
+            let cloneWord = newWord
+            let dumpWord = newWord
+            /*
+            for(var key in json){
+                let regKey = key;
+                if(key[0] == "-"){
+                    regKey = regKey.replace("-","") + "\\b";
+                }
+                
+                
+                var regex = new RegExp(regKey);
+                if(dumpWord.search(regex) < 0) continue;
+                regex = new RegExp(regKey, "g");
+                
+                //*        FASTER, un-l337
+                
+                
+                dumpWord = dumpWord.replace(regex, (mch) => {     //HEAVY
+                                              let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
+                                              return allReplacements.length > 0 ? allReplacements[Math.floor(Math.random()*allReplacements.length)]: mch;
+                                              } )
+                
+                //*///cloneWord = sum == 10 ? "55": sum.toString()
+                
+            //}
+            
+            if(sum == 0) return dumpWord + " ";
+            
+            let arr = []
+            
+            for(var key in json){
+                let regKey = key;
+                if(key[0] == "-") regKey = regKey.replace("-","") + "\\b";
+                
+                var regex = new RegExp(regKey);
+                if(newWord.search(regex) < 0) continue;
+                regex = new RegExp(regKey, "g");
+                
+                //let allReplacements = json[key].filter((a) => a.match(/[1-9]|\w{2,}/))
+                //if(allReplacements.length <= 0) continue;
+                let highest = json[key][json[key].length-1];
+                if(!isNaN(parseInt(highest))){
+                    newWord.match(regex).forEach(() => arr.push(parseInt(highest)))
+                }else newWord = newWord.replace(regex, highest);    //HEAVY
+            }
+            
+            let res = getSummingItems(arr, sum);
+            if(!res || res.length < 1) {
+                if (pCmd <= 8 && pCmd >= 5){
+                    return dumpWord + " " + getNewWordWithSum(pCmd) + getNewWordWithSum(sum-1, pCmd)
+
+                }
+                return dumpWord + " " + getNewWordWithSum(sum)
+            }
+            res = res[0]
+            
+            for(var key in json){
+                let regKey = key;
+                if(key[0] == "-"){
+                    regKey = regKey.replace("-","") + "\\b";
+                }
+                
+                
+                var regex = new RegExp(regKey);
+                if(cloneWord.search(regex) < 0) continue;
+                regex = new RegExp(regKey, "g");
+                
+                //*        FASTER, un-l337
+                
+                //FIXME: some words are possible but arent built correnctly....
+                
+                cloneWord = cloneWord.replace(regex, (mch) => {     //HEAVY
+                                              let replIx = res.findIndex((r)=> json[key].includes(r.toString()) )
+                                              
+                                              if(replIx < 0){
+                                              //let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
+                                              //return allReplacements.length > 0 ? allReplacements[Math.floor(Math.random()*allReplacements.length)]: mch;
+                                              return mch
+                                              }
+                                              return res.splice(replIx, 1)
+                                              } )
+                
+                //*/ cloneWord = sum == 10 ? "55": sum.toString()
+                
+            }
+            if(cloneWord.sum() != sum){
+                console.log("!!", sum)
+            }
+            return cloneWord + " ";
+            
+        }
+        
         let possibleKeys = []
         switch(prevWord){
             case "n": possibleKeys.push("v", "prä", "kon")
@@ -179,7 +279,7 @@ function decompile(){
             wordIx++;
             if(wordIx >= jsonWords[possibleKeys[wordTypeIx]].length)  {
                 //console.log(possibleKeys[wordTypeIx], sum)
-                if(wordTypeIx < possibleKeys.length - 1){
+                if(wordTypeIx < possibleKeys.length /*- 1*/){
                     wordIx = 0;
                     wordTypeIx++;
                 }else return "xxERR" + sum + "Rxx";
@@ -275,13 +375,13 @@ function decompile(){
                 }
                 if(prev > 8 || prev < 5) { alert("ERR: prev="+prev); break; }
                 
-                resultSource += getNewWordWithSum(9) + getNewWordWithSum(prev);
+                resultSource += getNewWordWithSum(9, prev) + getNewWordWithSum(prev);
                 
                 cmd -= 10;
                 
             }
             
-            resultSource += getNewWordWithSum(cmd);
+            resultSource += getNewWordWithSum(cmd, prev);
         }
     }
     
