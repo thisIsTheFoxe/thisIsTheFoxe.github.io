@@ -58,12 +58,11 @@ function decompile(){
        "-er":["or", "orz"],
         "-ers":["orz"],
         "f":["ph"],
-        "one":["1"],
+        "e":["€", "3"],
         "for":["4"],
         "ea":["33"],
         "you": ["u", "j00"],
         "d":["[)"],
-        "e":["€", "3"],
         "s":["$", "5",],
         "i":["!", "1"],
         "g":["6","9"],
@@ -73,6 +72,15 @@ function decompile(){
         "l":["£", "1"],
         "k": ["|<"],
         "n": ["|\\|"],
+        "1":["1"],
+        "2":["2"],
+        "3":["3"],
+        "4":["4"],
+        "5":["5"],
+        "6":["6"],
+        "7":["7"],
+        "8":["8"],
+        "9":["9"],
         "t":["+", "7"],
         "b":["6", "8"],
         "m":["|\\/|"],
@@ -81,6 +89,7 @@ function decompile(){
         "o":["0", "()"],
         "u":["Ü", "ü"],
         "c":["(", "©"],
+        "one":["1"],
         "at":["@"],
         "-ed":["t"],
         "ex":["x"],
@@ -94,8 +103,6 @@ function decompile(){
         "ass":["@$$"],
         "shit":["$#!+"]
     }
-    
-    
     
     let theSourceCode = Array(MEMORY_SIZE);
     theSourceCode.fill(0);
@@ -148,8 +155,7 @@ function decompile(){
     }
     
     var prevWord = "art";
-    
-    var customWords = customSource.split(/[ \n](?=\w)/gm)
+    var customWords = customSource.split(/[ \n](?=\w)/gm)//.filter(w => w.sum() == 0 )
     var customWordIx = 0
     
     function getNewWordWithSum(sum, pCmd){
@@ -161,10 +167,10 @@ function decompile(){
             newWord = customWords[customWordIx]
             customWordIx++
             
-            if(newWord == undefined){ throw("Not enought words"); return }
+            if(newWord == undefined){ out.innerHTML = "Error: Not enought words";throw("Not enought words"); return }
             
             let cloneWord = newWord
-            let dumpWord = newWord
+            let dumpWord = newWord.replace(/[1-9]/g, '?')
             
             for(var key in json){
                 let regKey = key;
@@ -220,6 +226,13 @@ function decompile(){
             }
             res = res[0]
             
+            cloneWord.replace(/[1-9]/g, (mch) => {
+                              let ix = res.findIndex(r =>  r == mch )
+                              if(ix < 0) return "?";
+                              res.splice(ix, 1)
+                              return mch
+                              })
+            
             for(var key in json){
                 let regKey = key;
                 if(key[0] == "-"){
@@ -249,7 +262,7 @@ function decompile(){
                 
             }
             if(cloneWord.sum() != sum){
-                console.log("!!", sum)
+                cloneWord = "ERR"*(sum == 10 ? "55": sum.toString())+"ERR"
             }
             return cloneWord + " ";
         }
