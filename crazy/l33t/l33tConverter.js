@@ -53,27 +53,15 @@ function decompile(){
     
     var json = {
         //äöü ->ae etc.
-        "ate":["8"],
-        "that": ["tht"],
-        "ck":["xx"],
-        "are": ["r"],
-        "and":["&"],
-        "ass":["@$$"],
-        "shit":["$#!+"],
+        // "oo":["3"],
         "-s":["z"],
-        "-ed":["t"],
-        "-er":["or", "orz"],
+       "-er":["or", "orz"],
         "-ers":["orz"],
         "f":["ph"],
-        "ex":["x"],
         "one":["1"],
         "for":["4"],
-        "to":["2"],
-        "too":["2"],
-        "oo":["3"],
         "ea":["33"],
         "you": ["u", "j00"],
-        "at":["@"],
         "d":["[)"],
         "e":["€", "3"],
         "s":["$", "5",],
@@ -92,7 +80,19 @@ function decompile(){
         "v":["\\/"],
         "o":["0", "()"],
         "u":["Ü", "ü"],
-        "c":["(", "©"]
+        "c":["(", "©"],
+        "at":["@"],
+        "-ed":["t"],
+        "ex":["x"],
+        "to":["2"],
+        "too":["2"],
+        "ate":["8"],
+        "that": ["tht"],
+        "ck":["xx"],
+        "are": ["r"],
+        "and":["&"],
+        "ass":["@$$"],
+        "shit":["$#!+"]
     }
     
     
@@ -149,7 +149,7 @@ function decompile(){
     
     var prevWord = "art";
     
-    var customWords = customSource.split(' ')
+    var customWords = customSource.split(/[ \n](?=\w)/gm)
     var customWordIx = 0
     
     function getNewWordWithSum(sum, pCmd){
@@ -165,7 +165,7 @@ function decompile(){
             
             let cloneWord = newWord
             let dumpWord = newWord
-            /*
+            
             for(var key in json){
                 let regKey = key;
                 if(key[0] == "-"){
@@ -187,7 +187,7 @@ function decompile(){
                 
                 //*///cloneWord = sum == 10 ? "55": sum.toString()
                 
-            //}
+            }
             
             if(sum == 0) return dumpWord + " ";
             
@@ -212,8 +212,9 @@ function decompile(){
             let res = getSummingItems(arr, sum);
             if(!res || res.length < 1) {
                 if (pCmd <= 8 && pCmd >= 5){
-                    return dumpWord + " " + getNewWordWithSum(pCmd) + getNewWordWithSum(sum-1, pCmd)
-
+                    let s = dumpWord + " " + getNewWordWithSum(pCmd) + getNewWordWithSum(sum-1, pCmd)
+                    console.log(s, 0, pCmd, sum-1)
+                    return s
                 }
                 return dumpWord + " " + getNewWordWithSum(sum)
             }
@@ -225,21 +226,20 @@ function decompile(){
                     regKey = regKey.replace("-","") + "\\b";
                 }
                 
-                
                 var regex = new RegExp(regKey);
                 if(cloneWord.search(regex) < 0) continue;
                 regex = new RegExp(regKey, "g");
                 
                 //*        FASTER, un-l337
                 
-                //FIXME: some words are possible but arent built correnctly....
+                //FIXME: some words are possible but aren't re-built correnctly....
                 
                 cloneWord = cloneWord.replace(regex, (mch) => {     //HEAVY
                                               let replIx = res.findIndex((r)=> json[key].includes(r.toString()) )
                                               
                                               if(replIx < 0){
-                                              //let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
-                                              //return allReplacements.length > 0 ? allReplacements[Math.floor(Math.random()*allReplacements.length)]: mch;
+                                              let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
+                                              return allReplacements.length > 0 ? allReplacements[allReplacements.length-1]: mch;
                                               return mch
                                               }
                                               return res.splice(replIx, 1)
@@ -252,7 +252,6 @@ function decompile(){
                 console.log("!!", sum)
             }
             return cloneWord + " ";
-            
         }
         
         let possibleKeys = []

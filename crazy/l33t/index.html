@@ -10,7 +10,8 @@
 <script src="./l33t.js"></script></head>
 <body>
 <label>Expected Output of code:</label><br/><textarea style="height:250px; width:500px" id="resultOfCode"></textarea><br/>
-<input id="maualInput" type="checkbox" onClick="document.getElementById('textInput').style.display = document.getElementById('maualInput').checked ? 'block': 'none'"/><label>Input text to convert:</label><br/><textarea style="height:250px; width:500px; display: none;" id="textInput"></textarea><br/>
+<input id="maualInput" type="checkbox" onClick="document.getElementById('textInput').style.display = document.getElementById('maualInput').checked ? 'block': 'none'"><label>Input text to convert:</label></input><br/>
+<textarea style="height:250px; width:500px; display: none;" id="textInput"></textarea><br/>
 <button onclick="decompile()">Create Code</button><br/><br/>
 <label>Code that produces expected output:</label><br/>
 <textarea id="leetResult" style=" height:250px; width:500px;background-color:grey;" readonly="readonly"></textarea><br/>
