@@ -55,7 +55,7 @@ function decompile(){
         //äöü ->ae etc.
         // "oo":["3"],
         "-s":["z"],
-       "-er":["or", "orz"],
+        "-er":["or", "orz"],
         "-ers":["orz"],
         "f":["ph"],
         "e":["€", "3"],
@@ -167,7 +167,7 @@ function decompile(){
             newWord = customWords[customWordIx]
             customWordIx++
             
-            if(newWord == undefined){ out.innerHTML = "Error: Not enought words";throw("Not enought words"); return }
+            if(newWord == undefined){ out.innerHTML = "Error: Not enought words"; throw("Not enought words"); return }
             
             let cloneWord = newWord
             let dumpWord = newWord.replace(/[1-9]/g, '?')
@@ -187,9 +187,9 @@ function decompile(){
                 
                 
                 dumpWord = dumpWord.replace(regex, (mch) => {     //HEAVY
-                                              let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
-                                              return allReplacements.length > 0 ? allReplacements[Math.floor(Math.random()*allReplacements.length)]: mch;
-                                              } )
+                                            let allReplacements = json[key].filter((a) => a.match(/[^1-9]/))
+                                            return allReplacements.length > 0 ? allReplacements[Math.floor(Math.random()*allReplacements.length)]: mch;
+                                            } )
                 
                 //*///cloneWord = sum == 10 ? "55": sum.toString()
                 
