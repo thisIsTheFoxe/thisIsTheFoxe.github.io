@@ -1,0 +1,23 @@
+body{
+    background: black;
+    color: #20c20e;
+    font-weight: bold;
+    font-family: Courier New;
+}
+button{
+    font-size: 15pt;
+    font-family: Luminari;
+    background: gray;
+    color: cyan;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+@keyframes blink {
+  0%   { color:cyan; }
+  25%  { color:deeppink; }
+  50%  { color:white; }
+  75%  { color:fuchsia; }
+  100% { color:cyan; }
+}

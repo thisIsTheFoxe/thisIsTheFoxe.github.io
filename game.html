@@ -21,9 +21,11 @@
             let x = 150
             let y = 150
             let dir = 3 //o, r, u, l
+            
             function start(){
                 timerID = setInterval(play, speed);
             }
+        
         function play(){
             console.log(x,y);
             canvas.beginPath();
@@ -53,8 +55,6 @@
                 return
             }
             
-            
-            
             canvas.lineTo(x,y);
             canvas.stroke();
             
@@ -65,7 +65,6 @@
                 clearTimeout(timerID)
                 start()
             }
-            
         }
         
         function gameOver(){
@@ -85,8 +84,6 @@
                 case 'd': dir = dir = dir <= 0 ? 3: --dir
             }
         }
-        
-            
         </script>
         
 </html>

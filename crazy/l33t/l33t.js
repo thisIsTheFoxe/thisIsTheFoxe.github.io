@@ -3,7 +3,7 @@ function run(){
 	let out = document.getElementById("output")
 	let input = document.getElementById("input").value
 	out.innerHTML = "";
-	console.log(srcCode)
+	//console.log(srcCode)
 	var i = -1;
 	var curr = 0;
 	var isWord = false
@@ -25,7 +25,7 @@ function run(){
 	
 	while(mem.length < MEMORY_SIZE){ mem = mem.concat(0) }
 	
-	console.log(mem)
+	//console.log(mem)
 	
 	var progEnd = false
 	let val = 0;
@@ -102,11 +102,11 @@ function run(){
 				progEnd = true;
 			break;
 			default:
-				console.log("j00 4r3 7h3 5uxXx0r")
+				//console.log("j00 4r3 7h3 5uxXx0r")
 				return;
 			
 		}
 	}
-	console.log(mem)
+	//console.log(mem)
 	
 }

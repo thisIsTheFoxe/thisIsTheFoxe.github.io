@@ -3218,8 +3218,6 @@ console.timeEnd()
 out.innerText = resultSource;
 /*
 
-test string: "file://hbmess14/E85401$/profile/desktop/l33t_s7uf1/index2.html"
-
 default, normal: 5298.19384765625ms
 
 
