@@ -4,6 +4,9 @@ body{
     font-weight: bold;
     font-family: Courier New;
 }
+::selection {
+    background: #1b03a3;
+}
 button{
     font-size: 15pt;
     font-family: Luminari;
