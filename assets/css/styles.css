@@ -12,6 +12,11 @@
     opacity: 0.7;
 }
 
+.sourcerer {
+    margin: 0;
+    vertical-align: -52%;
+}
+
 body.history {
     background-color: #dddddd
 }
@@ -271,17 +276,20 @@ td,th {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-/*
-tr,nth-child(even) {
+
+ tr:nth-child(even) {
     background-color: lightgray;
-}
-*/
+} 
+
 a {
     color : #FF7933;
     font-weight: 500;
     text-decoration: none;
     
     transition: all 500ms ease-out;
+    -webkit-transition:all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
 }
 
 a:hover {
