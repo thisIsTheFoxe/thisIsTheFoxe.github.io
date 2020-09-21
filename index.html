@@ -21,10 +21,15 @@
     <link rel="stylesheet" href="./assets/css/styles.css"/>
         <script>
             // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+            window.onscroll = function() { scrollFunction() };
+            
+            var scrollTopHide = 0;
+            window.onload = () => {
+                scrollTopHide = document.documentElement.scrollHeight - document.documentElement.clientHeight - 200;
+            }
             
             function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                if (document.documentElement.scrollTop > 200 && document.documentElement.scrollTop < scrollTopHide) {
                     document.getElementById("toTopBtn").style.display = "block";
                 } else {
                     document.getElementById("toTopBtn").style.display = "none";
@@ -37,7 +42,7 @@
         </script>
     </head>
                     <body>
-                        <noscript>Please Enable JavaScript to enjoy this Website with all it's features :)</noscript>
+                        <noscript>Please Enable JavaScript to enjoy this website in all its beauty :)</noscript>
                         <i class="fas fa-arrow-alt-circle-up" id="toTopBtn" onclick="topFunction()"></i>
                         <h1>Official website of @thisIsTheFoxe</h1>
                         <button onclick="window.location.href='./pass/'">To my pass</button>
@@ -45,12 +50,11 @@
                         <div class="about">
                             <h3><u>About Me</u>:</h3>
                             <img style="height:250px;width:250px;" src="./assets/images/profile.jpg" alt="Profile picture"/>
-                            <p>My name is Henrik Storch and I am <span id="age"></span> years old and live in Stuttgart, Germany.<br/>
-                            I started developing iOS apps back in 2012 with the first programing laguage I came to know: Objective-C.
-                            It was fun and to be hones more or less just playing around and exporing what one could do with the right tools. <br/>
-                            After two years of learning and improving I made the decision to switch from my normal high school to a more technical high school which also had programming classes.<br/>
-                            Three years later I graduated and started to study Informatics at the Cooperative State University of Baden-Wuerttemberg (DHBW) in Stuttgart. <br/><br/>
-                            In my free time I also enjoy making music, especially on trumpet, piano or ukulele. I too am writing music on my own, but haven't published any of it yet. Furthermore, I am volunteering in a world-wide bible education work.
+                            <p>My name is Henrik Storch, I am <span id="age"></span> years old and live near Stuttgart, Germany.<br/>
+                            I started developing iOS apps back in 2012 using the first programing language I came to know: Objective-C.
+                            It was fun and after two years of learning and improving I decided to switch schools from my ordinary high school to a more technical high school, which also had programming classes.<br/>
+                            Three years later I graduated and started to study Informatics at the Cooperative State University of Baden-Wuerttemberg (DHBW) Stuttgart.<br/><br/>
+                            In my free time I also enjoy making music, especially on trumpet, piano, or ukulele. I too am writing music on my own, but haven't published any of it yet. Furthermore, I am volunteering in a world-wide bible education work (learn more <a target="_blank" href="https://jw.org">HERE</a>).
                             </p>
                         </div>
                             <h3><u>My Coding-Skills</u>:</h3>
@@ -121,7 +125,7 @@
                                     <div class="fill"></div>
                                 </div>
                             </div>
-                            <div id="espcircle" data-text="Spanish" data-percent="30" class="yellow percircle animate gt50">
+                            <div id="espcircle" data-text="Spanish" data-percent="25" class="yellow percircle animate gt50">
                                 <span>Spanish</span>
                                 <div class="slice">
                                     <div class="bar" style="transform: rotate(360deg);"></div>
@@ -132,59 +136,66 @@
                         <hr/>
                         <div class="text">
                             <h1>My Experiences:</h1>
+                            <h3>WWDC20</h3>
+                            <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC20">Link to my 2020 Playground</a>
+                            <p>2020 was an interesting year. The COVID-19 pandemic changed everything. One of the small changes was the renaming of #WWDCScholars to #SwiftStudentChallenge. The bigger change was that the entire WWDC would be hosted as an online-only event. For that reason (and because I was busy writing my bachelor's thesis), I did not put as much work into my playground as in my previous submissions.<br/>
+                            However, I didn't want to just give up, especially knowing and supporting the entire community formed around this event. So, I gave myself 24 hours right when they announced #WWDC20. Within this time I came up with the idea to make a little 2D SpriteKit game about my favorite TV show, Community. I used some third-party assets and put it all together nicely to create a 2-minute interactive experience. At the end I wrote my essays and submitted everything in time. That was the earliest I have ever submitted a WWDCScholars submission.<br/>
+                            As expected, my work was too quick & dirty to receive special attention. That makes me happy, because it proves (at least to me) that Apple's judgement process is working and fair (contrary to what others claimed).<br/>
+                            Since I am finishing my studies, #WWDC20 will probably be the last time I submitted a student submission. I did have a lot of fun and I'm sure that I will cherish all the experiences I was able to make for the rest of my life.
+                            </p>
                             <h3>WWDC19</h3>
                             <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC19">Link to my 2019 PlaygroundBook</a>
-                            <p>By now I've been quite active in the whole WWDCScholars community. 
-                            It felt so good getting Slack and Telegram notification from all those WWDC groups wich all have been pretty silent for almost a year now... 
-                            (Btw, since 2019 there exists a new OFFICIAL WWDCScholars Discord Server! For more Info contact me or anyone else from the WWDCScholars Team) ..And as soon as WWDC19 was announced, I too began to think about participating.<br/>
+                            <p>By now I've been quite active in the WWDCScholars community.
+                            It felt so good getting Slack and Telegram notification from all those WWDC groups again, which all have been pretty silent for almost a year now...
+                            (Btw, since 2019 there exists a new OFFICIAL WWDCScholars Discord Server! For more Info contact me or anyone else from the WWDCScholars Team) ..And as soon as Apple announced WWDC19, I too began to think about participating.<br/>
                             I ended up with an idea that I got from a "Formal Languages and Automata" lecture I had at university. 
-                            The thing that impressed me the most was the fact that with a few baisc operations you could calculate virtually everything! 
-                            So I decided to create my own litlle programing-language which would only use emoji and as said just a few basic operations, because why not? :D<br/>
-                            The name of this language is: DubDubMachine and you can also find the specs also on <a target="_blank" href="https://esolangs.org/wiki/DubDubMachine">esolangs.org</a><br/>
+                            The thing that impressed me the most was the fact that with a few basic operations you could calculate virtually everything!
+                            So I decided to create my own programing-language which would only use emoji and as said just a few basic operations, because why not? :D<br/>
+                            The name of this language is: <i>DubDubMachine</i> and you can also find the specs also on <a target="_blank" href="https://esolangs.org/wiki/DubDubMachine">esolangs.org</a><br/>
                             Sadly (and due to <q>a record-breaking number of incredible [...] submissions</q>), my PlaygroundsBook wasn't accepted for a scholarship this year... 
                             However, I had a blast enjoying the Keynote and especially trying out new stuff with SwiftUI and I already have plans to use it in my next projects.
                             Also, as many other scholars put it: <br/>
-                            <q>This year showed me how special the WWDC really is and what an immense privilege it is to be invited there.</q> I will definelty not give up now and couldn't be more exited about #WWDC20</p>
+                            <q>This year showed me how special the WWDC really is and what an immense privilege it is to be invited there.</q> I will definitely not give up now and couldn't be more exited about #WWDC20</p>
                             <h3>WWDC18</h3>
                             <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC18">Link to my 2018 PlaygroundBook</a>
-                            <p>After I had such an awesome expeience last year, I couldn't have been more exited when I saw Apples&trade; announcement for &#xF8FF; WWDC18. Once again, I worked hard, while being enrolled in a full-time study program, to apply for a scholarship.<br/>
+                            <p>After I had such an awesome experience last year, I couldn't have been more exited when I saw Apple's announcement for &#xF8FF; WWDC18. Once again, I worked hard, while being enrolled in a full-time study program, to apply for a scholarship.<br/>
                             So I, again, had the great privilege to join 350 as amazing scholars from all around the world for one week in San Jos&eacute;. Not only that but this time, right at the start we had the honor to visit the Steve Jobs Theater right next to &#xF8FF; Park! It was breathtaking. Everything is designed perfectly, just as you would it expect from a company like Apple&trade;.<br/>
                             The conference itself was no less exciting. With macOS dark mode, ARKit 2.0 and CreateML and so much more stuff it was a very awesome week.<br/>
-                            Being there for the second time now, I was able to get much more out of it than last time. In fact, the motivational boost I got held on for quite some time after the dubDub, which led to me keeping to work on private projects...<br/>
+                            Being there for the second time now, I was able to get much more out of it than last time. In fact, the motivational boost I received after dubDub continued for some time, which made me continue working on private projects...<br/>
                             Of course I also met many fellow developers, including Frederik Riedel, Amanda Southworth and Felix Krause. The &#xF8FF; World Wide Developer Conference always is a unique experience and I'm very glad I've been a part of that.
                             </p>
                             <h3>HUGO BOSS AG</h3>
                             <p>After graduating in winter 2017, I joined an integrated degree program (lit. "dual-study") at HUGO BOSS.<br/>
-                            It took me quite some time to get used to working within a big company and all organisazional matters, especially getting used to share my code, keyword: Git.<br/>
-                            It also helped me to grow personally: living alone (finally) and making my own money, cosequently: Being entirely self-responsible.<br/>
-                            I enjoy working at HUGO BOSS very much and in my opinion it's a reat company to work for and with. Having a beautiful big headquaters in Metzingen, Germany with many, friendly co-workers who all are ready to help and colaborate.</p>
+                            It took me some time to get used to working within a big company and all organisational matters, especially getting used to share my code, keyword: Git.<br/>
+                            It also helped me to grow personally. Living alone (finally) and making my own money, consequently: Being entirely self-responsible.<br/>
+                            I enjoyed working at HUGO BOSS very much and in my opinion it's a great company to work for and with. Having a beautiful big headquarters in Metzingen, Germany with many, friendly co-workers who all are ready to help and collaborate.</p>
                             <h3>WWDC17</h3>
                             <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC17">Link to my 2017 PlaygroundBook</a>
-                            <p>It was my greates honor to be invited to join &Tilde;5000 other developers and software engineers at &#xF8FF; WWDC17. <br/>
-                            It was the first time I worked with Playgrounds on a real Project and it was both fun and exhausting to 'write' my PlaygroundBook. And it was even harder, given that I was about to graduate and that my finals started a few days after the deadline for application. <br/>
-                            I cannot say in words how HYPED I was nor the hight that I was jumping, when I finally revieved <i>that</i> email for the first time in my life.<br/>
-                            The conference helped me a lot to have a deeper understanding of Swift and it got me into some very cool new APIs which would be important for my further career. Furthermore it realy did a great job in connecting me with other developers, even around me. I got to know one of the founders of the #WWDCScholars: Sam Eckert and a some other Apple&trade; enthusiasts. One of them eventually tuned out to be my future fellow student.<br/>
+                            <p>It was my greatest honor to be invited to join &Tilde;5000 other developers and software engineers at &#xF8FF; WWDC17. <br/>
+                            It was the first time I worked with Playgrounds on a real project and it was both fun and exhausting to 'write' my PlaygroundBook. And it was even harder, given that I was about to graduate from high school and that my finals started a few days after the deadline for application. <br/>
+                            I cannot say in words how HYPED I was, nor the hight that I was jumping, when I finally received <b>that</b> email for the first time in my life.<br/>
+                            The conference helped me a lot to have a deeper understanding of Swift and it got me into some very cool new APIs which would be important for my further career. Furthermore, it really did a great job in connecting me with other developers, even within my area. I got to know one of the founders of the #WWDCScholars: Sam Eckert and a some other Apple enthusiasts. One of them eventually tuned out to be my future fellow student.<br/>
                             <h3>Tech. Gymnasium Schw&auml;bisch Gm&uuml;nd</h3>
                             <img style="width: 80%; padding: 10px" src="https://www.gs-gd.de/files/theme/images/logo.gif" alt="TG Logo">
-                                <p>After taking an 'ordinary' school career for almost 10 years, I made the choice to do something new. So, I switched schools and spent the last tree years I was high school studying informatics, programming and digital engineering (too). I finally graduated in April 2017.<br/>
+                                <p>After taking an 'ordinary' school career for almost 10 years, I made the choice to do something new. So, I switched schools and spent the last tree years I was high school studying computer scinece, programming and digital engineering (too). I finally graduated in April 2017.<br/>
                                 This gave me a very strong basis in computer knowledge that I would need later.<br/>
                                 </p>
                             <h3>KomaNet GmbH</h3>
                             <img src="https://www.ko-ma.net/wp-content/uploads/2015/05/komanetlogo.gif" style="padding: 10px" alt="KoMaNet Logo">
-                                <p>My very first Internship I had was back in 2012. It was an IT-Company which also was an authorized reseller of Apple&trade;. <br/>
+                                <p>The very first Internship I had, was back in 2012. It was an IT-Company which also was an authorized reseller of Apple&trade; products. <br/>
                                 I really enjoyed it and it increased my interest in technology.<br/>
                                 More Information <a href="https://www.ko-ma.net">HERE</a>.
                                 </p>
                             <h1 id="my_work">My Work:</h1>
                             <h3 id="TTT3">(TicTacToe)&sup3;</h3>
                             <img class="icon" src="./assets/images/TTTIcon.png" alt="TicTacToe AppIcon">
-                                <p>This is one of the very first 3D AR Multiplayer experiences. on the AppStore. Combining the classic TicTacToe with the newest technologies, creating an outstanding game for you and your friends.<br/>
-                                If you are intersted you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/tictactoe/id1412179757?ls=1&mt=8">HERE</a>.<br/>(First release: 09/2018).<br/>
+                                <p>This is one of the very first 3D AR Multiplayer experiences. on the AppStore&trade;. Combining the classic TicTacToe with the newest technologies, creating an outstanding game for you and your friends.<br/>
+                                If you are interested you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/tictactoe/id1412179757?ls=1&mt=8">HERE</a>.<br/>(Initial release: 09/2018).<br/>
                                 </p>
                                 <h3 id="pongAdventure">Pong Adventure</h3>
                                 <img class="icon" src="./assets/images/PongIcon.png" alt="Pong Adventure AppIcon">
                                     <p>This is my fist App which is available on the AppStore&trade;. It isn't highly complex and professional, but I developed this App entirely by myself an am very proud that it made it into the store!<br/>
-                                    If you are intersted you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/pong-adventure/id1166251755?mt=8">HERE</a>.<br/>(First release: 2014)<br/>
+                                    If you are interested you can download it: <a target="_blank" href="https://itunes.apple.com/us/app/pong-adventure/id1166251755?mt=8">HERE</a>.<br/>(Initial release: 2014)<br/>
                                     </p>
                         </div>
                         <footer>
@@ -206,12 +217,10 @@
                         
                         <script>
                             $(function(){
-                              $("[id$='circle']").percircle();
+                                $("[id$='circle']").percircle();
                             });
-                            
-                              document.getElementById("age").innerHTML = (new Date(Date.now() - 897516000000)).getUTCFullYear() - 1970
-                            </script>
-                        
+                            document.getElementById("age").innerHTML = (new Date(Date.now() - 897516000000)).getUTCFullYear() - 1970
+                        </script>
                     </body>
 </html>
 
