@@ -8,6 +8,19 @@
     border-radius: 15px;
 }
 
+.appstore {
+    background-color: transparent;
+    margin: 10px;
+}
+
+.playstore {
+    margin: 0px;
+    height: 60px;
+    width: 140px;
+    object-fit: cover;
+    background-color: transparent;
+}
+
 .fa:hover, fab:hover {
     opacity: 0.7;
 }
@@ -268,7 +281,6 @@ table {
 
 
 td,th {
-    
     border-color: #65ce84;
     border-style: solid;
     border-width: 1px;
