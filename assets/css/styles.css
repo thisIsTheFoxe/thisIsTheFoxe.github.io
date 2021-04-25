@@ -26,8 +26,8 @@
 }
 
 .sourcerer {
-    margin: 0;
-    vertical-align: -52%;
+    display: inline-flex;
+    vertical-align: bottom;
 }
 
 body.history {
@@ -291,7 +291,15 @@ td,th {
 
  tr:nth-child(even) {
     background-color: lightgray;
-} 
+}
+
+a img {
+    background-color: transparent;
+    transition: all 500ms ease-out;
+    -webkit-transition:all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+}
 
 a {
     color : #FF7933;
