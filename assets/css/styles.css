@@ -1,9 +1,10 @@
-.fa, .fab {
+.fa,
+.fab {
     padding: 12px;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
-    background: #EFF2CF;
+    background: #eff2cf;
     margin: 20px 5px;
     border-radius: 15px;
 }
@@ -11,6 +12,18 @@
 .appstore {
     background-color: transparent;
     margin: 10px;
+}
+
+.airport {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.airport a {
+    padding: 15px;
+    font-weight: bold;
+    background-color: #dddddd;
+    border-radius: 10px;
 }
 
 .playstore {
@@ -21,7 +34,8 @@
     background-color: transparent;
 }
 
-.fa:hover, fab:hover {
+.fa:hover,
+fab:hover {
     opacity: 0.7;
 }
 
@@ -31,7 +45,7 @@
 }
 
 body.history {
-    background-color: #dddddd
+    background-color: #dddddd;
 }
 
 body {
@@ -42,14 +56,14 @@ body {
     text-align: center;
     margin: 0px;
 }
-.small-rings{
-    height:255px;
+.small-rings {
+    height: 255px;
 }
-.big-rings{
-    height:255px;
+.big-rings {
+    height: 255px;
 }
 .about {
-    width: 757px;
+    width: 555px;
 }
 div {
     margin: auto;
@@ -87,7 +101,7 @@ div.bottom {
     width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    position: fixed ;
+    position: fixed;
 }
 
 div.card {
@@ -95,11 +109,11 @@ div.card {
 }
 
 hr {
-    border: 1px solid #AAA;
+    border: 1px solid #aaa;
     border-radius: 7px 7px 7px 7px;
     margin: 20px 75px;
     height: 3px;
-    background-color: #AAA;
+    background-color: #aaa;
 }
 
 button {
@@ -109,20 +123,20 @@ button {
     background-color: #888888;
     text-align: center;
     font-size: 25px;
-    font-family : "HelveticaNeue-Light", sans-serif;
+    font-family: "HelveticaNeue-Light", sans-serif;
     color: white;
     border-color: transparent;
     border-radius: 5px;
     border-width: 1px;
-    
-    -webkit-transition : background-color 500ms ease-out;
-    -moz-transition : background-color 500ms ease-out;
-    -o-transition : background-color 500ms ease-out;
+
+    -webkit-transition: background-color 500ms ease-out;
+    -moz-transition: background-color 500ms ease-out;
+    -o-transition: background-color 500ms ease-out;
     transition: background-color 500ms ease-out;
 }
 
 button:active {
-    background-color: #FF7933;
+    background-color: #ff7933;
 }
 
 button.enabled {
@@ -130,13 +144,13 @@ button.enabled {
 }
 
 button:hover {
-    background-color: #FF7933;
+    background-color: #ff7933;
 }
 .bottom-margin {
     margin-bottom: 15px;
 }
 
-#toTopBtn{
+#toTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -148,20 +162,20 @@ button:hover {
     outline: none;
     cursor: pointer;
     padding: 15px;
-    
-    -webkit-transition : color 500ms ease-out;
-    -moz-transition : color 500ms ease-out;
-    -o-transition : color 500ms ease-out;
-    transition: color 500ms ease-out;
 
+    -webkit-transition: color 500ms ease-out;
+    -moz-transition: color 500ms ease-out;
+    -o-transition: color 500ms ease-out;
+    transition: color 500ms ease-out;
 }
 #toTopBtn:hover {
-    color: #FF7933;
+    color: #ff7933;
 }
 
-.accept{
+.accept {
     width: 300px;
 }
+
 textarea {
     margin-top: 10px;
     margin-left: 50px;
@@ -172,14 +186,14 @@ textarea {
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
-    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+    border-color: -moz-use-text-color #ffffff #ffffff -moz-use-text-color;
     border-image: none;
     border-radius: 6px 6px 6px 6px;
     border-style: none solid solid none;
     border-width: medium 1px 1px medium;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
     color: #555555;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 1.4em;
     padding: 5px 8px;
@@ -187,7 +201,7 @@ textarea {
 }
 
 textarea:focus {
-    background: none repeat scroll 0 0 #FFFFFF;
+    background: none repeat scroll 0 0 #ffffff;
     outline-width: 0;
 }
 
@@ -198,14 +212,14 @@ input {
     width: 350px;
     height: 50px;
     border-color: transparent;
-    
+
     color: #999999;
     background-color: transparent;
     font-size: 30px;
-        
+
     -webkit-transition: border 500ms ease-out;
-    -moz-transition : border 500ms ease-out;
-    -o-transition : border 500ms ease-out;
+    -moz-transition: border 500ms ease-out;
+    -o-transition: border 500ms ease-out;
     transition: border 500ms ease-out;
 }
 
@@ -216,11 +230,12 @@ input[type="number"] {
 
 input:focus {
     outline: none;
-    border-bottom-color: #FF7933;
+    border-bottom-color: #ff7933;
 }
 
 h1 {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+        sans-serif;
     font-size: 30px;
     padding-top: 30px;
     margin-bottom: 30px;
@@ -250,7 +265,6 @@ h3 {
     color: #777;
 }
 
-
 footer {
     background-color: #373737;
     text-align: center;
@@ -279,8 +293,8 @@ table {
     padding: 1px;
 }
 
-
-td,th {
+td,
+th {
     border-color: #65ce84;
     border-style: solid;
     border-width: 1px;
@@ -289,25 +303,25 @@ td,th {
     padding-bottom: 5px;
 }
 
- tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: lightgray;
 }
 
 a img {
     background-color: transparent;
     transition: all 500ms ease-out;
-    -webkit-transition:all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
     -moz-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
 }
 
 a {
-    color : #FF7933;
+    color: #ff7933;
     font-weight: 500;
     text-decoration: none;
-    
+
     transition: all 500ms ease-out;
-    -webkit-transition:all 500ms ease-out;
+    -webkit-transition: all 500ms ease-out;
     -moz-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
 }
@@ -317,12 +331,12 @@ a:hover {
     text-decoration: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 
 /* The Modal (background) */
@@ -336,12 +350,12 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 0.4s;
     animation-name: fadeIn;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
 }
 
 /* Modal Content */
@@ -355,12 +369,12 @@ input[type=number]::-webkit-outer-spin-button {
     width: auto;
     max-height: 70vh;
     overflow-y: scroll;
-    
+
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
-    
+
     border-color: transparent;
     border-width: 1px;
     border-radius: 5px;
@@ -370,34 +384,34 @@ input[type=number]::-webkit-outer-spin-button {
     div {
         width: 100%;
     }
-	
-    .text{
+
+    .text {
         width: 100%;
     }
-    
-     .about{
-	    width: 100%;
+
+    .about {
+        width: 100%;
     }
-    .small-rings{
-    	height:275px;
+    .small-rings {
+        height: 275px;
     }
-    .big-rings{
-   	 height:400px;
+    .big-rings {
+        height: 400px;
     }
 }
 @media only screen and (max-height: 414px) {
-    p{
+    p {
         font-size: 12px;
     }
-    .contactMe{
-        color:#d7d7d7;
+    .contactMe {
+        color: #d7d7d7;
         font-size: 20px;
     }
-    .dark{
-        color:#999
+    .dark {
+        color: #999;
     }
-    .big-rings{
-   	 height:260px;
+    .big-rings {
+        height: 260px;
     }
 }
 
@@ -411,36 +425,56 @@ input[type=number]::-webkit-outer-spin-button {
 
 .close:hover,
 .close:focus {
-    color: #FF7933;
+    color: #ff7933;
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.icon{
-        border-radius: 20%;
-        height: 300px;
-        width: 300px;
+.icon {
+    border-radius: 20%;
+    height: 300px;
+    width: 300px;
 }
 
 img.thumb {
@@ -455,7 +489,7 @@ input[type="file"] {
 }
 
 div.thumb {
-   height: 250px;
+    height: 250px;
     width: 250px;
     display: flex;
     justify-content: center;
@@ -465,26 +499,26 @@ div.thumb {
 }
 
 @media (prefers-color-scheme: dark) {
-    body{
+    body {
         background-color: #222;
     }
-    h1{
+    h1 {
         color: #ccc;
     }
-    h2{
+    h2 {
         color: #999;
     }
-    h3{
+    h3 {
         color: #aaa;
     }
-    hr{
+    hr {
         background-color: #666;
         border: 1px solid #666;
     }
-    img{
+    img {
         background-color: #ddd;
     }
-    label{
+    label {
         color: #bbb;
     }
     textarea {
@@ -500,5 +534,8 @@ div.thumb {
     .modal-content {
         background-color: #fefefe;
         color: #222;
+    }
+    .airport a {
+        background-color: #373737;
     }
 }
