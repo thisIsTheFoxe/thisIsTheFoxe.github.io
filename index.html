@@ -5,54 +5,34 @@
     <title>thisIsTheFoxe</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
     <link rel="manifest" href="./assets/site.webmanifest" />
     <link rel="mask-icon" href="./assets/images/safari-pinned-tab.svg" color="#f18719" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico" />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)" />
     <meta property="og:image" content="./assets/images/apple-touch-icon.png" />
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./assets/js/percircle.js"></script>
+    <script src="/assets/js/percircle.js"></script>
+    <script src="/assets/js/siteload.js"></script>
     <meta name="viewport" content="width = device-width" />
     <link rel="stylesheet" href="./assets/css/percircle.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        var scrollTopHide = 0;
-        window.onload = () => {
-            scrollTopHide = document.documentElement.scrollHeight - document.documentElement.clientHeight - 200;
-        }
-
-        function scrollFunction() {
-            if (document.documentElement.scrollTop > 200 && document.documentElement.scrollTop < scrollTopHide) {
-                document.getElementById("toTopBtn").style.display = "block";
-            } else {
-                document.getElementById("toTopBtn").style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-        }
-    </script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
 <body>
     <noscript>Please Enable JavaScript to enjoy this website in all its beauty :)</noscript>
-    <i class="fas fa-arrow-alt-circle-up" alt="Scroll to the top" id="toTopBtn" onclick="topFunction()"></i>
     <div class="modal-content">
         Due to the continued spread of the COVID-19 pandemic, I helped to improve the <a
             href="https://aatishb.com/covidtrends/">Covid Trends</a> website.
         <br /><a href="https://www.thisisthefoxe.me/covidtrends/"><b>Learn more about the effects of COVID-19</b></a>
     </div>
+    <header id="header"></header>
     <h1>Official website of @thisIsTheFoxe</h1>
-    <button onclick="window.location.href='./pass/'">To my pass</button>
     <br />
     <div class="about">
         <h3><u>About Me</u>:</h3>
@@ -63,7 +43,7 @@
             University of Baden-Wuerttemberg (DHBW) Stuttgart. Nowadays, I spend my time with my own ideas and personal
             projects.<br />
             In my free time I also enjoy making music, especially on trumpet, piano, or ukulele.
-            I am also currently pursuing a PPL-A pilot license.
+            I am also a fully licensed private pilot!
             Furthermore, I am volunteering in a worldwide bible education work
             (<a target="_blank" href="https://jw.org">learn more</a>).
         </p>
@@ -80,35 +60,35 @@
         <div id="webcircle" data-text="Web" data-percent="85" class="red percircle animate gt50">
             <span>Web</span>
             <div class="slice">
-                <div class="bar" style="transform: rotate(288deg);"></div>
-                <div class="fill"></div>
-            </div>
-        </div>
-        <div id="objCcircle" data-text="Obj.-C" data-percent="75" class="darkblue percircle animate gt50">
-            <span>Obj.-C</span>
-            <div class="slice">
                 <div class="bar" style="transform: rotate(306deg);"></div>
                 <div class="fill"></div>
             </div>
         </div>
-        <div id="javacircle" data-text="Java" data-percent="75" class="brown percircle animate gt50">
-            <span>Java</span>
+        <div id="objCcircle" data-text="Obj.-C" data-percent="80" class="darkblue percircle animate gt50">
+            <span>Obj.-C</span>
             <div class="slice">
                 <div class="bar" style="transform: rotate(288deg);"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <div id="javacircle" data-text="Java" data-percent="70" class="brown percircle animate gt50">
+            <span>Java</span>
+            <div class="slice">
+                <div class="bar" style="transform: rotate(252deg);"></div>
                 <div class="fill"></div>
             </div>
         </div>
         <div id="Ccircle" data-text="C/C++" data-percent="65" class="blue percircle animate gt50">
             <span>C/C++</span>
             <div class="slice">
-                <div class="bar" style="transform: rotate(288deg);"></div>
+                <div class="bar" style="transform: rotate(234deg);"></div>
                 <div class="fill"></div>
             </div>
         </div>
-        <div id="assemblercircle" data-text="asm" data-percent="65" class="green percircle animate gt50">
+        <div id="assemblercircle" data-text="asm" data-percent="60" class="green percircle animate gt50">
             <span>asm</span>
             <div class="slice">
-                <div class="bar" style="transform: rotate(252deg);"></div>
+                <div class="bar" style="transform: rotate(216deg);"></div>
                 <div class="fill"></div>
             </div>
         </div>
@@ -144,242 +124,7 @@
             </div>
         </div>
     </div>
-    <hr />
-    <div class="text">
-        <h1>My Experiences:</h1>
-        <h3>WWDC20</h3>
-        <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC20">Link to my 2020 Playground</a>
-        <p>2020 was an interesting year. The COVID-19 pandemic changed everything. One of the small changes was the
-            renaming of #WWDCScholars to #SwiftStudentChallenge. The bigger change was that the entire WWDC would be
-            hosted as an online-only event. For that reason (and because I was busy writing my bachelor's thesis), I did
-            not put as much work into my playground as in my previous submissions.<br />
-            However, I didn't want to just give up, especially knowing and supporting the entire community
-            that formed around this event. So, I gave myself 24 hours right when they announced #WWDC20.
-            Within this time I came up with the idea to make a little 2D SpriteKit game
-            about my favorite TV show, Community. I used some third-party assets and put it all together nicely
-            to create a 2-minute interactive experience. At the end I wrote my essays and submitted
-            everything in time. That was the earliest I have ever submitted a WWDCScholars
-            submission.<br />
-            As expected, my work was too quick & dirty to receive special attention. That makes me happy, because it
-            proves (at least to me) that Apple's judgment process is working and fair (contrary to what others have
-            claimed).<br />
-            Since I am finishing my studies, #WWDC20 will probably be the last time I submitted a student submission. I
-            did have a lot of fun and I'm sure that I will cherish all the experiences I was able to make for the rest
-            of my life.
-        </p>
-        <h3>WWDC19</h3>
-        <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC19">Link to my 2019 PlaygroundBook</a>
-        <p>By now I've been quite active in the WWDCScholars community.
-            It felt so good getting Slack and Telegram notification from all those WWDC groups again, which all have
-            been pretty silent for almost a year now...
-            (Btw, since 2019 there exists a new OFFICIAL WWDCScholars Discord Server!
-            For more information contact me or anyone else from the WWDCScholars Team)
-            ..And as soon as Apple announced WWDC19, I too began to think about participating.<br />
-            I ended up with an idea that I got from a "Formal Languages and Automata" lecture I had at university.
-            The thing that impressed me the most was the fact that with a few basic operations you could calculate
-            virtually everything!
-            So I decided to create my own programing language which would only use emoji and, as said, just a few basic
-            operations, because why not? :D<br />
-            The name of this language is: <i>DubDubMachine</i> and you can also find the specs on
-            <a target="_blank" href="https://esolangs.org/wiki/DubDubMachine">esolangs.org</a><br />
-            Sadly (and due to <q>a record-breaking number of incredible [...] submissions</q>), my PlaygroundsBook
-            wasn't accepted for a scholarship this year...
-            However, I had a blast enjoying the Keynote and especially trying out new stuff with SwiftUI and I already
-            have plans to use it in my next projects.
-            Also, as many other scholars put it: <br />
-            <q>This year showed me how special the WWDC really is and what an immense privilege it is to be invited
-                there.</q> I will definitely not give up now and couldn't be more exited about #WWDC20
-        </p>
-        <h3>WWDC18</h3>
-        <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC18">Link to my 2018 PlaygroundBook</a>
-        <p>After I had such an awesome experience last year, I couldn't have been more exited when I saw Apple's
-            announcement for &#xF8FF; WWDC18. Once again, I worked hard, while being enrolled in a full-time study
-            program, to apply for a scholarship.<br />
-            So, I again had the great privilege to join 350 as-amazing scholars from all over the world
-            for one week in San Jos&eacute;.
-            Not only that, but this time, right at the start we had the honor to visit the Steve Jobs Theater
-            right next to &#xF8FF; Park! It was breathtaking. Everything is designed perfectly, just as you
-            would it expect from a company like Apple&trade;.<br />
-            The conference itself was no less exciting. With macOS dark mode, ARKit 2.0 and CreateML and so much more
-            stuff it was a very awesome week.<br />
-            Being there for the second time now, I was able to get much more out of it than last time. In fact, the
-            motivational boost I received after dubDub continued for some time, which made me continue working on
-            private projects...<br />
-            Of course I also met many fellow developers, including Frederik Riedel, Amanda Southworth and Felix Krause.
-            The &#xF8FF; World Wide Developer Conference always is a unique experience and I'm very glad I've been a
-            part of that.
-        </p>
-        <h3>HUGO BOSS AG</h3>
-        <p>After graduating from High School in winter 2017, I joined an integrated degree program (lit. "dual-study")
-            at HUGO BOSS.<br />
-            It took me some time to get used to working within a big company and all organizational matters, especially
-            getting used to sharing my code, keyword: Git.<br />
-            It also helped me to grow personally. Living alone (finally) and making my own money, consequently: Being
-            entirely self-responsible.<br />
-            I enjoyed working at HUGO BOSS very much and in my opinion it's a great company to work for and with. Having
-            a beautiful big headquarters in Metzingen, Germany with many, friendly co-workers who all are ready to help
-            and collaborate.</p>
-        <h3>WWDC17</h3>
-        <a target="_blank" href="https://github.com/thisIsTheFoxe/WWDC17">Link to my 2017 PlaygroundBook</a>
-        <p>It was my greatest honor to be invited to join &Tilde;5000 other developers and software engineers at
-            &#xF8FF; WWDC17. <br />
-            It was the first time I worked with Playgrounds on a real project and it was both fun and exhausting to
-            'write' my PlaygroundBook. And it was even harder, given that I was about to graduate from high school and
-            that my finals started a few days after the deadline for application. <br />
-            I cannot say in words how HYPED I was, nor the hight that I was jumping, when I finally received <b>that</b>
-            email for the first time in my life.<br />
-            The conference helped me a lot to have a deeper understanding of Swift and it got me into some very cool new
-            APIs which would be important for my further career. Furthermore, it really did a great job in connecting me
-            with other developers, even within my area. I got to know one of the founders of the #WWDCScholars: Sam
-            Eckert and a some other Apple enthusiasts. One of them eventually tuned out to be my future fellow
-            student.<br />
-        <h3>Tech. Gymnasium Schw&auml;bisch Gm&uuml;nd</h3>
-        <img style="width: 80%; padding: 10px" src="https://www.gs-gd.de/files/theme/images/logo.gif" alt="TG Logo">
-        <p>After taking an 'ordinary' school career for almost 10 years, I made the choice to do something new. So, I
-            switched schools and spent my final 3 high school years studying computer science, programming and
-            digital engineering. I eventually graduated in April 2017.<br />
-            This gave me a very strong knowledge base in the field of computer science that I would need later on in my
-            life.<br />
-        </p>
-        <h3>KomaNet GmbH</h3>
-        <img src="https://www.ko-ma.net/wp-content/uploads/2015/05/komanetlogo.gif" style="padding: 10px"
-            alt="KoMaNet Logo">
-        <p>The very first Internship I had, was back in 2012. It was an IT-Company which also was an authorized reseller
-            of Apple&trade; products. <br />
-            I really enjoyed it and it increased my interest in technology.<br />
-            More Information <a href="https://www.ko-ma.net">HERE</a>.</p>
-        <h1 id="my_work">My Work:</h1>
-        <h3 id="geo">GeoguessAR</h3>
-        <img class="icon" src="./assets/images/geoIcon.png" alt="GeoguessAR AppIcon">
-        <p>GeoguessAR aims to improve your sense of direction and distance. It was inspired by
-            <a href="https://youtu.be/QYlVJlmjLEc?t=107">a Tom Scott video</a>. 
-            In the app you can look "through" the Earth and see and guess
-            where other places in the world are relative to you. 
-            <br />(Initial release: 09/2021)<br />
-            <a href="https://apps.apple.com/us/app/geoguessar/id1579883089" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="siri">Adventures for Siri</h3>
-        <img class="icon" src="./assets/images/SiriIcon.png" alt="Adventures for Siri AppIcon">
-        <p>While working with SiriKit Intents, I noticed how the resolution behaviour is somewhat wired and it's easy to
-            get caugh up in endless loops. Using that pattern I was able to make simple PnP-games you can play with or
-            against Siri. Including one of my all-time favorites: Dunnet.
-            <br />(Initial release: 05/2021)<br />
-            <a href="https://apps.apple.com/us/app/adventures-for-siri/id1564635035" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="vFS">FINE Stickers</h3>
-        <img class="icon" src="./assets/images/FineStickersIcon.png" alt="FINE Stickers AppIcon">
-        <p>I had the privilege of working together with my awesome artist friend
-            <a target="_blank" href="https://instagram.com/fine.is.drawing">Josefine</a>,
-            hence the name of this app. It showcases just some of
-            her artwork in the form of iMessage and WhatsApp stickers. And for the record, I'm just the developer here,
-            this is <u>her</u> app! Also, this is the first app I ever published on Google Play&trade;.
-            <br />(Initial release: 03/2021)<br />
-            <a href="https://apps.apple.com/us/app/fine-stickers/id1554899511" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=me.thisisthefoxe.veryFineStickers">
-                <img class="playstore" alt="Get it on Google Play" src="assets/images/googleplay.png">
-            </a>
-        </p>
-        <h3 id="6imal">seximal</h3>
-        <img class="icon" src="./assets/images/seximalIcon.png" alt="seximal AppIcon">
-        <p>Inspired by <a target="_blank" href="https://www.youtube.com/watch?v=qID2B4MK7Y0">jan Misali</a> I made an
-            app that showcases the seximal (or senary, heximal, base-six)
-            numbering system. It gives you a glimpse into a <s>decimal</s> seximal world. To learn more about seximal
-            visit <a target="_blank" href="https://seximal.net">seximal.net</a><br />
-            (Initial release: 01/2021)<br />
-            <a href="https://apps.apple.com/us/app/seximal/id1551165727" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="aar">AvoidAR</h3>
-        <img class="icon" src="./assets/images/AvoidARIcon.png" alt="AvoidAR AppIcon">
-        <p>A friend gave me the idea of creating a game, which's feature it is to keep your finger on the touchscreen
-            for as long as possible. A few moments later I started to create a game where you need to dodge obstacles
-            flying toward you in Augmented Reality (also using 3D-Touch). Lifting your finger means Game Over!<br />
-            (Initial release: 01/2021)<br />
-            <a href="https://apps.apple.com/us/app/avoidar/id1547238534" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="todo">ToDo-pamine</h3>
-        <img class="icon" src="./assets/images/ToDoIcon.png" alt="ToDo-pamine AppIcon">
-        <p>This app was inspired by the YouTube video <a href="https://www.youtube.com/watch?v=JJeQIXBdVuk">I Built a
-                Dopamine Box</a>.
-            Creating a daily to-do list (even if it only has mundane tasks) can increase dopamine production and thus
-            overall productivity. I felt that I could do that by providing an alternative to the default iOS
-            Reminders.app, to maximize productivity. The result is my first ever published SwiftUI app. <br />
-            (Initial release: 11/2020)<br />
-            <a href="https://apps.apple.com/us/app/todo-pamine/id1536111704" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="ttt">(TicTacToe)&sup3;</h3>
-        <img class="icon" src="./assets/images/TTTIcon.png" alt="TicTacToe AppIcon">
-        <p>This is one of the very first 3D AR Multiplayer experiences on the AppStore&trade;. Combining the classic
-            TicTacToe with the newest technologies, creating an outstanding game for you and your friends.<br />
-            (Initial release: 09/2018)<br />
-            <a href="https://apps.apple.com/us/app/tictactoe/id1412179757" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-        <h3 id="pong">Pong Adventure</h3>
-        <img class="icon" src="./assets/images/PongIcon.png" alt="Pong Adventure AppIcon">
-        <p>This is my fist App which is available on the AppStore&trade;. It isn't highly complex, but
-            I developed this App entirely by myself and am very proud that it made it into the store!<br />
-            (Initial release: 2014)<br />
-            <a href="https://apps.apple.com/us/app/pong-adventure/id1166251755" target="_blank">
-                <picture>
-                    <source srcset="assets/images/appstore_dark.svg" media="(prefers-color-scheme: dark)">
-                    <img alt="Download on the AppStore" class="appstore" src="assets/images/appstore_light.svg">
-                </picture>
-            </a>
-        </p>
-    </div>
-    <footer>
-        <p class="contactMe">Here are some quick links to get in touch with me:</p>
-        <a target="_blank" href="tel:+4915164307951" class="fa fa-phone" alt="Telephone"></a>
-        <a target="_blank" href="mailto:thisisthefoxe@gmail.com" class="fa fa-envelope" alt="Email"></a>
-        <a target="_blank" href="https://twitter.com/thisisthefoxe" class="fab fa-twitter" alt="Twitter"></a>
-        <a target="_blank" href="https://www.youtube.com/channel/UCFTjvprHsDO5HP9586Iqr2g" class="fab fa-youtube"
-            alt="YouTube"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/henrik-storch-3a173a13b" class="fab fa-linkedin"
-            alt="LinkedIn"></a>
-        <a target="_blank" href="https://instagram.com/thisisthefoxe" class="fab fa-instagram" alt="Instagram"></a>
-        <a target="_blank" href="https://github.com/thisisthefoxe" class="fab fa-github" alt="GitHub"></a>
-        <a target="_blank" href="https://snapchat.com/add/thisisthefoxe" class="fab fa-snapchat" alt="Snapchat"></a>
-        <a target="_blank" href="https://sourcerer.io/thisisthefoxe" class="fa sourcerer"> <img alt="Sourcerer"
-                src="./assets/images/Sourcerer.svg" height="30px"></a>
-        <br />
-        <a href="./AppSupport.html">App Support</a>
-        <a href="./imprint.html">Imprint</a>
-        <a href="./PrivacyPolicy.html">Privacy Policy</a>
-    </footer>
+    <footer id="footer"></footer>
 
     <script>
         $(function () {

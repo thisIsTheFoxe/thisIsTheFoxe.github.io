@@ -146,8 +146,13 @@ button.enabled {
 button:hover {
     background-color: #ff7933;
 }
-.bottom-margin {
-    margin-bottom: 15px;
+.bottom-padding {
+    padding-bottom: 15px;
+}
+
+#toc {
+    text-align: left;
+    padding-left: 10px;
 }
 
 #toTopBtn {
@@ -178,7 +183,6 @@ button:hover {
 
 textarea {
     margin-top: 10px;
-    margin-left: 50px;
     width: 500px;
     height: 150px;
     -moz-border-bottom-colors: none;
@@ -265,6 +269,13 @@ h3 {
     color: #777;
 }
 
+header {
+    background-color: #373737;
+    text-align: center;
+    padding: 10px 0px;
+    /* font-family: "Ariel", sans-serif; */
+}
+
 footer {
     background-color: #373737;
     text-align: center;
@@ -339,6 +350,12 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+form div {
+    text-align: left;
+    width: 450px;
+    padding-left: 10px;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -377,10 +394,43 @@ input[type="number"]::-webkit-outer-spin-button {
 
     border-color: transparent;
     border-width: 1px;
-    border-radius: 5px;
+}
+
+#nav {
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid #999;
+    border-radius: 7px;
+    margin: 0px 5px;
+}
+
+nav li a {
+    font-weight: bold;
+}
+
+nav li.active a {
+    color: #333;
+}
+
+nav li.active {
+    background-color: #ff7933;
+    text-decoration: none;
+
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 750px) {
+    textarea {
+        width: 70%;
+    }
+
     div {
         width: 100%;
     }
@@ -425,7 +475,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .close:hover,
 .close:focus {
-    color: #ff7933;
+    color: #222;
     text-decoration: none;
     cursor: pointer;
 }
