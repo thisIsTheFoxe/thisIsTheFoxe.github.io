@@ -146,8 +146,13 @@ button.enabled {
 button:hover {
     background-color: #ff7933;
 }
-.bottom-margin {
-    margin-bottom: 15px;
+.bottom-padding {
+    padding-bottom: 15px;
+}
+
+#toc {
+    text-align: left;
+    padding-left: 10px;
 }
 
 #toTopBtn {
@@ -178,7 +183,6 @@ button:hover {
 
 textarea {
     margin-top: 10px;
-    margin-left: 50px;
     width: 500px;
     height: 150px;
     -moz-border-bottom-colors: none;
@@ -349,6 +353,7 @@ input[type="number"]::-webkit-outer-spin-button {
 form div {
     text-align: left;
     width: 450px;
+    padding-left: 10px;
 }
 
 /* The Modal (background) */
@@ -423,6 +428,10 @@ nav li.active {
 }
 
 @media only screen and (max-width: 750px) {
+    textarea {
+        width: 70%;
+    }
+
     div {
         width: 100%;
     }
