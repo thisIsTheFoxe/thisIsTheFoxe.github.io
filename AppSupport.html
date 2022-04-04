@@ -20,30 +20,35 @@
 <body>
     <noscript>Please Enable JavaScript to enjoy this Website with all it's features :)</noscript>
     <h1>App Support</h1>
-    <p>Welcome to my App-Support website. If you have any problems with any of my apps or feedback for me (the
+    <p class="contactMe">Welcome to my App-Support website. If you have any problems with any of my apps or feedback for me (the
         developer) please let me know what you think.</p>
     <br />
-    <label>Which App:</label>
-    <select id="app">
-        <option value="pong">Pong Adventure</option>
-        <option value="siri">Adventures for Siri</option>
-        <option value="aar">AvoidAR</option>
-        <option value="vFS">FINE Stickers</option>
-        <option value="geo">GeoguessAR</option>
-        <option value="jwx">JWX</option>
-        <option value="6imal">seximal</option>
-        <option value="ttt">TicTacToe&sup3;</option>
-        <option value="todo">ToDo-pamine</option>
-        <option value="lilcounter">Days Since – Counter</option>
-    </select><br />
-    <label>What kind of feeback:</label>
-    <select id="kind">
-        <option value="bug">I have a problem</option>
-        <option value="idea">Idea and other feedback</option>
-    </select><br />
+    <form>
+        <div>
+            <label>Which App:</label>
+            <select id="app">
+                <option value="pong">Pong Adventure</option>
+                <option value="siri">Adventures for Siri</option>
+                <option value="aar">AvoidAR</option>
+                <option value="vFS">FINE Stickers</option>
+                <option value="geo">GeoguessAR</option>
+                <option value="jwx">JWX</option>
+                <option value="6imal">seximal</option>
+                <option value="ttt">TicTacToe&sup3;</option>
+                <option value="todo">ToDo-pamine</option>
+                <option value="lilcounter">Days Since – Counter</option>
+            </select>
+            <br />
+            <label>Kind of feeback:</label>
+            <select id="kind">
+                <option value="bug">I have a problem</option>
+                <option value="idea">Idea and other feedback</option>
+            </select>    
+        </div>
     <textarea id="text"></textarea><br />
     <button onclick="send()">Continue</button>
-    <br />
+</form>
+<br />
     <a href="../">Back to main page...</a>
 
     <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
