@@ -39,11 +39,6 @@ fab:hover {
     opacity: 0.7;
 }
 
-.sourcerer {
-    display: inline-flex;
-    vertical-align: bottom;
-}
-
 body.history {
     background-color: #dddddd;
 }
