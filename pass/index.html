@@ -6,12 +6,29 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="/assets/js/siteload.js"></script>
+    <script src="/assets/js/isIOS.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
+    integrity="sha384-SOnAn/m2fVJCwnbEYgD4xzrPtvsXdElhOVvR8ND1YjB5nhGNwwf7nBQlhfAwHAZC" crossorigin="anonymous">
     </head>
   <body>
+    <script>
+      window.onload = () => {
+          if (isIOS()) {
+            document.getElementById("passBtn").hidden = false
+          }
+        }
+    </script>
     <header id="header"></header>
     <h1>It's a pleasure to meet you!</h1>
     <p class="contactMe dark">Feel free to contact me anytime...</p>
-    <img src="../assets/images/wallet.svg" onclick="window.location = './theFoxe.pkpass'" style="margin-bottom: 20px; background-color: transparent;" alt="Add to Apple Wallet">
-    <br/>
+    <div>
+      <img hidden id="passBtn" src="../assets/images/wallet.svg" onclick="window.location = './theFoxe.pkpass'" style="margin-bottom: 20px; background-color: transparent;" alt="Add to Apple Wallet">
+      <br/>
+      <a id="vcfBtn" href="./theFoxe.vcf">
+        <i class="fa-solid fa-address-card"></i>
+        Download vCard
+      </a>  
+    </div>
+    <hr/>
   </body>
 </html>

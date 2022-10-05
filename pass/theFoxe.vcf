@@ -1,0 +1,24 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iPhone OS 16.0//EN
+N:Storch;Henrik;;;
+FN:Henrik Storch
+ORG:thisIsTheFoxe;
+item1.EMAIL;type=INTERNET;type=pref:thisIsTheFoxe@gmail.com
+item1.X-ABLabel:Support
+TEL;type=IPHONE;type=CELL;type=VOICE;type=pref:+49 151 64307951
+TEL;type=CELL;type=VOICE:+6421462925
+X-SOCIALPROFILE;type=Snapchat;x-user=thisIsTheFoxe:x-apple:thisIsTheFoxe
+X-SOCIALPROFILE;type=Instagram;x-user=thisIsTheFoxe:x-apple:thisIsTheFoxe
+X-SOCIALPROFILE;type=twitter:http://twitter.com/thisIsTheFoxe
+X-SOCIALPROFILE;type=linkedin:http://www.linkedin.com/in/thisIsTheFoxe
+X-SOCIALPROFILE;type=GitHub;x-user=thisIsTheFoxe:x-apple:thisIsTheFoxe
+item2.URL;type=pref:https://thisIsTheFoxe.me
+item2.X-ABLabel:_$!<HomePage>!$_
+item3.URL;type=pref:https://apps.apple.com/developer/henrik-storch/id1166251754
+item3.X-ABLabel:AppStore
+item4.IMPP;X-SERVICE-TYPE=Telegram;type=pref:x-apple:thisIsTheFoxe
+item5.X-ABLabel:Telegram
+item5.IMPP;X-SERVICE-TYPE=Discord:x-apple:thisIsTheFoxe%233286;
+item5.X-ABLabel:Discord
+END:VCARD
